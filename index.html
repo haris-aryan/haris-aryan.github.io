@@ -11751,7 +11751,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Demonitization">Demonitization<a class="anchor-link" href="#Demonitization">&#182;</a></h1>
+<h1 id="Demonetization">Demonetization<a class="anchor-link" href="#Demonetization">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11760,9 +11760,10 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Hello !! This is my first Data Based Social Blog. I am wrting this for few reasons, one I am seeing lot of articles on internet/newspapers/TV that we are going digital with respect to financial transcations, yes if it happens I will be the happiest person but I just wanted to see the real story based on numbers. Two, I wanted to explore my recently acquired Python skills. Thrid, Fourth, Fifth and so on..</p>
-<p>In this blog I will be using couple of Python Libraries for Data Science. For non techinical folks (if I get any readers :)) I would suggest to just read the inferences in the bottom on all the charts. Chart heading shows what data is being plotted.</p>
-<p><B>Discalimer</B>: I am not against any person or institution. I will using publically available data published by RBI on NCPI website "<a href="https://rbi.org.in">https://rbi.org.in</a>" and few news articles. All the calulations are rough in nature, so they have full right to be worng. If you find any miscalculation, please do inform me, I would try too rectify it. I am using Python 2.7.</p>
+<p>Hello World !! This is my first Data Based Social Blog rather my first Blog <br>
+I am writing this for few reasons, one I am seeing lot of articles on internet/newspapers/TV that we are going digital with respect to financial transactions, yes if it happens I will be the happiest person but I just wanted to see the real story based on actual numbers. Two, I wanted to explore my recently learned Python skills. Third, Fourth, Fifth and so on..</p>
+<B> I will be mainly analysing NEFT and POS transactions data made available by RBI on onthly basis </B><p>In this blog I will be using couple of Python Data Science Libraries. For non-technical folks (if I get any readers :-)) I would suggest to just read the inferences in the bottom of the charts. Chart heading shows what data is being plotted.</p>
+<p><B>Disclaimer</B>: I am not against any person or institution. I will be using publically available data published by RBI on NCPI website "<a href="https://rbi.org.in">https://rbi.org.in</a>" and few news articles. All the calculations are rough in nature, so they have full right to be wrong. If you find any miscalculation, please do inform me, I would try to rectify it. I am using Python 2.7.</p>
 
 </div>
 </div>
@@ -11788,7 +11789,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">urllib2</span> <span class="kn">import</span> <span class="n">urlopen</span><span class="p">,</span><span class="n">Request</span>
@@ -11812,8 +11813,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is a cheat which I haven't used nor I would recommend you to use it. Actually RBI has blocked programatic access to its website and hence we need to morph our make name from Python-Urllib to "Mozilla/5.0".
-Since this is bit unethical to exploit this method, I would suggest you to go and fetch the excel files manually and store them all at one place. I am showing this option to teach you litle bit of hacking :)</p>
+<p>Below is a simple hack which I haven't used nor I would recommend you to use it. Actually RBI has blocked programmatic access to its website and hence we need to morph our make name from Python-Urllib to "Mozilla/5.0".
+Since this is bit unethical to exploit this method, I would suggest you to go and fetch the excel files manually and store them all at one place. I am showing this option to teach you little bit of hacking :)</p>
 <p>These statements will fetch the HTML page content which we will later pass through BeatifulSoup to parse it and fetch direct links to XLS files</p>
 
 </div>
@@ -11821,7 +11822,7 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;User-Agent&#39;</span> <span class="p">:</span> <span class="s1">&#39;Mozilla/5.0&#39;</span> <span class="p">}</span>
@@ -11836,7 +11837,7 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span><span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
@@ -11860,11 +11861,11 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">tables</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">tables</span><span class="p">[</span><span class="mi">0</span><span class="p">])[:</span><span class="mi">500</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -11878,8 +11879,7 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;table align=&#34;center&#34; border=&#34;0&#34; cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; width=&#34;100%&#34;&gt;
-&lt;table class=&#34;tablebg&#34; width=&#34;100%&#34;&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;April - 2017&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=108&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - April 2017&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/RTGS04201749644FE0AB69404993C622C3B00F3901.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;absmiddle&#34; border=&#34;0&#34; src=&#34;../Images/xls.gif&#34;/&gt;&lt;/a&gt; 126 kb&lt;/td&gt;&lt;td colspan=&#34;2&#34; nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/PDFs/RTGS04201749644FE0AB69404993C622C3B00F3901.PDF&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;bsmiddle&#34; border=&#34;0&#34; src=&#34;../Images/pdf.gif&#34;/&gt;&lt;/a&gt; 44 kb&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;March - 2017&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=107&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - March 2017&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/RTGS05042017FDE4E175397742479736425CCA92BB3A.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;absmiddle&#34; border=&#34;0&#34; src=&#34;../Images/xls.gif&#34;/&gt;&lt;/a&gt; 159 kb&lt;/td&gt;&lt;td colspan=&#34;2&#34; nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/PDFs/RTGS05042017FDE4E175397742479736425CCA92BB3A.PDF&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;bsmiddle&#34; border=&#34;0&#34; src=&#34;../Images/pdf.gif&#34;/&gt;&lt;/a&gt; 207 kb&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;February - 2017&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=106&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - February 2017&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/RTGS0220178D9C7B57F53A4724A863DCCE85527433.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;absmiddle&#34; border=&#34;0&#34; src=&#34;../Images/xls.gif&#34;/&gt;&lt;/a&gt; 147 kb&lt;/td&gt;&lt;td colspan=&#34;2&#34; nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/PDFs/RTGS0220178D9C7B57F53A4724A863DCCE85527433.PDF&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;bsmiddle&#34; border=&#34;0&#34; src=&#34;../Images/pdf.gif&#34;/&gt;&lt;/a&gt; 259 kb&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;January - 2017&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=105&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - January 2017&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/RTGS245A3710E9A54E11B6C09C826E50720C.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;absmiddle&#34; border=&#34;0&#34; src=&#34;../Images/xls.gif&#34;/&gt;&lt;/a&gt; 158 kb&lt;/td&gt;&lt;td colspan=&#34;2&#34; nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/PDFs/RTGS245A3710E9A54E11B6C09C826E50720C.PDF&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;bsmiddle&#34; border=&#34;0&#34; src=&#34;../Images/pdf.gif&#34;/&gt;&lt;/a&gt; 113 kb&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;December - 2016&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=104&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - December 2016&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/RTGS122016DB3EA7FF45E64116B37E557A9DE3B02F.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;absmiddle&#34; border=&#34;0&#34; src=&#34;../Images/xls.gif&#34;/&gt;&lt;/a&gt; 148 kb&lt;/td&gt;&lt;td colspan=&#34;2&#34; nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/PDFs/RTGS122016DB3EA7FF45E64116B37E557A9DE3B02F.PDF&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;bsmiddle&#34; border=&#34;0&#34; src=&#34;../Images/pdf.gif&#34;/&gt;&lt;/a&gt; 127 kb&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;November - 2016&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=103&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - November 2016&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/RTGS2712201660E74593E3F1499FAD16C14AEC8F29B1.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;absmiddle&#34; border=&#34;0&#34; src=&#34;../Images/xls.gif&#34;/&gt;&lt;/a&gt; 142 kb&lt;/td&gt;&lt;td colspan=&#34;2&#34; nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/PDFs/RTGS2712201660E74593E3F1499FAD16C14AEC8F29B1.PDF&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;bsmiddle&#34; border=&#34;0&#34; src=&#34;../Images/pdf.gif&#34;/&gt;&lt;/a&gt; 265 kb&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;October - 2016&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=102&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - October 2016&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/RTGS16112016ACB4064CDD064613B7E3B9ADD29A9191.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;absmiddle&#34; border=&#34;0&#34; src=&#34;../Images/xls.gif&#34;/&gt;&lt;/a&gt; 141 kb&lt;/td&gt;&lt;td colspan=&#34;2&#34; nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/PDFs/RTGS16112016ACB4064CDD064613B7E3B9ADD29A9191.PDF&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;bsmiddle&#34; border=&#34;0&#34; src=&#34;../Images/pdf.gif&#34;/&gt;&lt;/a&gt; 143 kb&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;September - 2016&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=101&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - September 2016&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/RTGS241020166D802171E1CE49F5B4ACF0CFE44F4590.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;absmiddle&#34; border=&#34;0&#34; src=&#34;../Images/xls.gif&#34;/&gt;&lt;/a&gt; 142 kb&lt;/td&gt;&lt;td colspan=&#34;2&#34; nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/PDFs/RTGS241020166D802171E1CE49F5B4ACF0CFE44F4590.PDF&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;bsmiddle&#34; border=&#34;0&#34; src=&#34;../Images/pdf.gif&#34;/&gt;&lt;/a&gt; 248 kb&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;August - 2016&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=100&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - August 2016&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/RTGS1909168C3BCF269FE645BB82187EF058A257E0.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;absmiddle&#34; border=&#34;0&#34; src=&#34;../Images/xls.gif&#34;/&gt;&lt;/a&gt; 146 kb&lt;/td&gt;&lt;td colspan=&#34;2&#34; nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/PDFs/RTGS1909168C3BCF269FE645BB82187EF058A257E0.PDF&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;bsmiddle&#34; border=&#34;0&#34; src=&#34;../Images/pdf.gif&#34;/&gt;&lt;/a&gt; 144 kb&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;July - 2016&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=99&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - July 2016&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/NEFT16082016F28D640954D34BC795F6A5763040FCF0.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;absmiddle&#34; border=&#34;0&#34; src=&#34;../Images/xls.gif&#34;/&gt;&lt;/a&gt; 142 kb&lt;/td&gt;&lt;td colspan=&#34;2&#34; nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/PDFs/NEFT16082016F28D640954D34BC795F6A5763040FCF0.PDF&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;bsmiddle&#34; border=&#34;0&#34; src=&#34;../Images/pdf.gif&#34;/&gt;&lt;/a&gt; 102 kb&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/table&gt;
+&lt;table class=&#34;tablebg&#34; width=&#34;100%&#34;&gt;&lt;tr&gt;&lt;td class=&#34;tableheader&#34; colspan=&#34;8&#34;&gt;&lt;b&gt;April - 2017&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;word-wrap:break-word;width:450;&#34;&gt;&lt;a class=&#34;link2&#34; href=&#34;NEFTUserView.aspx?Id=108&#34;&gt;Bankwise Volumes in ECS/NEFT/RTGS/Mobile Transactions - April 2017&lt;/a&gt;&lt;/td&gt;&lt;td nowrap=&#34;&#34;&gt;&lt;a href=&#34;http://rbidocs.rbi.org.in/rdocs/NEFT/DOCs/RTGS04201749644FE0AB69404993C622C3B00F3901.XLS&#34; target=&#34;_blank&#34;&gt;&lt;img align=&#34;abs
 </pre>
 </div>
 </div>
@@ -11992,7 +11992,7 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Do-Not-Run-This">Do Not Run This<a class="anchor-link" href="#Do-Not-Run-This">&#182;</a></h3><p>This is something which I am not going to execute nor would  recommend you to do. This will actuallt fetch the xls from NCPI website. I would recommend you to download it manually (which is leagally allowed).</p>
+<h3 id="Do-Not-Run-This">Do Not Run This<a class="anchor-link" href="#Do-Not-Run-This">&#182;</a></h3><p>This is something which I am not going to execute nor would  recommend you to do. This will actuallt fetch the xls from NCPI website. I would recommend you to download the data files manually (which is leagally allowed).</p>
 <p>What I am doing here:</p>
 <ol>
 <li>Modifying the Header <B>Dict</B> to include more info on what to except in response</li>
@@ -12008,18 +12008,13 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">hdr</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Accept-Charset&#39;</span><span class="p">:</span> <span class="s1">&#39;ISO-8859-1,utf-8;q=0.7,*;q=0.3&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Accept-Encoding&#39;</span><span class="p">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Accept-Language&#39;</span><span class="p">:</span> <span class="s1">&#39;en-US,en;q=0.8&#39;</span><span class="p">,</span>
-       <span class="s1">&#39;Connection&#39;</span><span class="p">:</span> <span class="s1">&#39;keep-alive&#39;</span><span class="p">}</span>
-<span class="n">req</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span><span class="n">sample_link</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">hdr</span><span class="p">)</span>
-<span class="n">xls1</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#hdr = {#I am puposefully removing the header info}</span>
+<span class="c1">#req = Request(sample_link,headers=hdr)</span>
+<span class="c1">#xls1 = urlopen(req)</span>
 
-<span class="n">filex</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;xls1.xls&#39;</span><span class="p">,</span><span class="s1">&#39;wb&#39;</span><span class="p">)</span>
-<span class="n">filex</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">xls1</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-<span class="n">filex</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="c1">#filex = open(&#39;xls1.xls&#39;,&#39;wb&#39;)</span>
+<span class="c1">#filex.write(xls1.read())</span>
+<span class="c1">#filex.close()</span>
 </pre></div>
 
 </div>
@@ -12032,14 +12027,14 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Prepration-Starts-Here">Data Prepration Starts Here<a class="anchor-link" href="#Data-Prepration-Starts-Here">&#182;</a></h2><p>Here I will first pick up one of the xls downloaded to see the tabs available. Later I will parse one of the Tabs to see the content and then extract the content of the required Tab in a dataframe. See if I need to do some Data Munging to convert this raw data to usable format</p>
+<h1 id="Data-Prepration-Starts-Here">Data Prepration Starts Here<a class="anchor-link" href="#Data-Prepration-Starts-Here">&#182;</a></h1><p>Here I will first pick up one of the xls downloaded to see the sheets/tabs available. Later I will parse one of the Tabs to see the content and then extract the content of the required Tab in a DataFrame. Lets see if I need to do some Data Munging to convert this raw data to usable format</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">xl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelFile</span><span class="p">(</span><span class="s1">&#39;RTGS2712201660E74593E3F1499FAD16C14AEC8F29B1.XLS&#39;</span><span class="p">)</span>
@@ -12054,7 +12049,7 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12072,7 +12067,7 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Lets-Analyse-NEFT-first">Lets Analyse NEFT first<a class="anchor-link" href="#Lets-Analyse-NEFT-first">&#182;</a></h1><p>Now is time for me decide What all I would include in my Analysis. Even before starting this work I had a thought of analysing NEFT and POS transactions because these are 2 major digital transaction catagories used by mass. Since I can see NEFT data available in this Sheet, I will parse it to see the data structure. POS data is hosted on a different RBI link, so I will run a saperate anlalysis for that.</p>
+<h2 id="Lets-Analyse-NEFT-first">Lets Analyse NEFT first<a class="anchor-link" href="#Lets-Analyse-NEFT-first">&#182;</a></h2><p>Now is time for me decide What all I would include in my Analysis. Even before starting this work I had a thought of analysing NEFT and POS transactions because these are 2 major digital transaction catagories used by mass. Since I can see NEFT data available in this Sheet, I will parse it to see the data structure. POS data is hosted on a different RBI link, so I will run a saperate anlalysis for that.</p>
 <p>To have a quick look at NEFT tab, I will prase it and do a head of that. Note that when I parse a sheet/tab in xls data is loaded in a <B>Pandas DataFrame</B>. I named it DF1 and then doing a head to see first 5 records.</p>
 
 </div>
@@ -12080,7 +12075,7 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">xl</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;NEFT&#39;</span><span class="p">)</span>
@@ -12093,10 +12088,10 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12107,7 +12102,7 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[33]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12165,16 +12160,6 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
       <td>680</td>
       <td>363.773</td>
     </tr>
-    <tr>
-      <th>4</th>
-      <td>NaN</td>
-      <td>3</td>
-      <td>AHMEDABAD MERCANTILE COOP BANK</td>
-      <td>4883</td>
-      <td>432.11</td>
-      <td>15176</td>
-      <td>830.842</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -12191,22 +12176,22 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>By Default, Parse will take first row as header But lookig at the data I can see that Header is actually first 3 rows.</p>
+<p>By Default, Parse will take first row as header But looking at the data I can see that Header is actually first 3 rows.</p>
 <p>Since pandas stores columns as an index, so it very easy to play with columns. 
-We can create #hierarchial indices in pandas - for both row index and column index. Hierarchial index make working data data really easy.</p>
-<p>Let us now extract the specific tab/sheet from the xls using more sophisticated Pandas tools - We will use read_excel. Note how I am making a hirearcial index by using 3 rows as header. I am excluding 2 last rows as they contain Totals etc. which I am not intersted to have in my data set.</p>
-<h1 id="First-I-will-quickly-show-how-read_excel-works-and-a-high-level-view-of-Hierarchail-Index">First I will quickly show how read_excel works and a high level view of Hierarchail Index<a class="anchor-link" href="#First-I-will-quickly-show-how-read_excel-works-and-a-high-level-view-of-Hierarchail-Index">&#182;</a></h1>
+We can create #hierarchical indices in pandas - for both row index and column index. Hierarchical index makes working with multilevel data really easy.</p>
+<p>Let us now extract the specific tab/sheet from the xls using more sophisticated Pandas tools - We will use read_excel. Note how I am making a hierarchal index by using 3 rows as header. I am excluding 2 last rows as they contain Totals etc. which I am not interested to have in my data set.</p>
+<h1 id="First-I-will-quickly-show-how-read_excel-works-and-a-high-level-view-of-Hierarchal-Index">First I will quickly show how read_excel works and a high level view of Hierarchal Index<a class="anchor-link" href="#First-I-will-quickly-show-how-read_excel-works-and-a-high-level-view-of-Hierarchal-Index">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="nb">file</span> <span class="o">=</span> <span class="s1">&#39;RTGS2712201660E74593E3F1499FAD16C14AEC8F29B1.XLS&#39;</span>
 <span class="n">df_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span><span class="n">sheetname</span><span class="o">=</span><span class="s1">&#39;NEFT&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="n">skip_footer</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">df_temp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">df_temp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12217,7 +12202,7 @@ We can create #hierarchial indices in pandas - for both row index and column ind
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[81]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12271,24 +12256,6 @@ We can create #hierarchial indices in pandas - for both row index and column ind
       <td>432.110315</td>
       <td>15176</td>
       <td>830.842455</td>
-    </tr>
-    <tr>
-      <th>NaN</th>
-      <td>4</td>
-      <td>AIRTEL PAYMENTS BANK LIMITED</td>
-      <td>19</td>
-      <td>0.877849</td>
-      <td>36</td>
-      <td>0.008893</td>
-    </tr>
-    <tr>
-      <th>NaN</th>
-      <td>5</td>
-      <td>AKOLA DISTRICT CENTRAL CO-OP BANK</td>
-      <td>6482</td>
-      <td>401.748515</td>
-      <td>3837</td>
-      <td>125.596445</td>
     </tr>
   </tbody>
 </table>
@@ -12423,8 +12390,8 @@ We can create #hierarchial indices in pandas - for both row index and column ind
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hierarchail-Columns">Hierarchail Columns<a class="anchor-link" href="#Hierarchail-Columns">&#182;</a></h3><p>Now to have a glimpse of hierarchial columns. First command shows us the column Index which is a MultiIndex created at 3 levels like this:</p>
-<p>levels = [[level0],[level1],[level2]]. Later I am showing you 3 levels saperately</p>
+<h3 id="Hierarchal-Columns">Hierarchal Columns<a class="anchor-link" href="#Hierarchal-Columns">&#182;</a></h3><p>Now to have a glimpse of hierarchical columns. First command shows us the column Index which is a MultiIndex created at 3 levels like this:</p>
+<p>levels = [[level0],[level1],[level2]]. Later I am showing you 3 levels separately</p>
 
 </div>
 </div>
@@ -12514,7 +12481,7 @@ I will also be changing 3 level columns to one level as we don't need hierarchia
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
@@ -12540,7 +12507,7 @@ I will also be changing 3 level columns to one level as we don't need hierarchia
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">df_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
@@ -12572,7 +12539,7 @@ So that I can compare QoQ growth between 2016-Q3 and 2016-Q4 with QoQ growth bet
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_cols</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -12595,7 +12562,7 @@ So that I can compare QoQ growth between 2016-Q3 and 2016-Q4 with QoQ growth bet
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_date_df</span><span class="p">(</span><span class="n">dfx</span><span class="p">):</span>
@@ -12630,7 +12597,7 @@ So that I can compare QoQ growth between 2016-Q3 and 2016-Q4 with QoQ growth bet
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">df</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_list</span><span class="p">):</span>
@@ -12647,10 +12614,10 @@ So that I can compare QoQ growth between 2016-Q3 and 2016-Q4 with QoQ growth bet
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">master_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">master_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12661,7 +12628,7 @@ So that I can compare QoQ growth between 2016-Q3 and 2016-Q4 with QoQ growth bet
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[91]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12681,52 +12648,32 @@ So that I can compare QoQ growth between 2016-Q3 and 2016-Q4 with QoQ growth bet
   <tbody>
     <tr>
       <th>NaN</th>
-      <td>1</td>
-      <td>ABHYUDAYA CO-OP BANK LTD</td>
-      <td>32722</td>
-      <td>2059.047492</td>
-      <td>88693</td>
-      <td>3137.749554</td>
+      <td>157</td>
+      <td>UCO BANK</td>
+      <td>527404</td>
+      <td>36130.335146</td>
+      <td>1765721</td>
+      <td>56873.470988</td>
       <td>2015-10-01</td>
     </tr>
     <tr>
       <th>NaN</th>
-      <td>2</td>
-      <td>ABU DHABI COMMERCIAL BANK</td>
-      <td>2217</td>
-      <td>553.107943</td>
-      <td>620</td>
-      <td>962.400814</td>
-      <td>2015-10-01</td>
+      <td>99</td>
+      <td>NAINITAL BANK LTD</td>
+      <td>17144</td>
+      <td>1266.926464</td>
+      <td>33937</td>
+      <td>2682.661663</td>
+      <td>2016-08-01</td>
     </tr>
     <tr>
       <th>NaN</th>
-      <td>3</td>
-      <td>AHMEDABAD MERCANTILE COOP BANK</td>
-      <td>4944</td>
-      <td>397.769896</td>
-      <td>12025</td>
-      <td>729.214049</td>
-      <td>2015-10-01</td>
-    </tr>
-    <tr>
-      <th>NaN</th>
-      <td>4</td>
-      <td>AKOLA DISTRICT CENTRAL CO-OP BANK</td>
-      <td>4253</td>
-      <td>403.423744</td>
-      <td>7887</td>
-      <td>108.715041</td>
-      <td>2015-10-01</td>
-    </tr>
-    <tr>
-      <th>NaN</th>
-      <td>5</td>
-      <td>ALLAHABAD BANK</td>
-      <td>863628</td>
-      <td>47949.467879</td>
-      <td>3799653</td>
-      <td>105017.513223</td>
+      <td>63</td>
+      <td>INDUSTRIAL AND COM BANK OF CHINA LT</td>
+      <td>150</td>
+      <td>87.292661</td>
+      <td>51</td>
+      <td>325.328915</td>
       <td>2015-10-01</td>
     </tr>
   </tbody>
@@ -12742,7 +12689,7 @@ So that I can compare QoQ growth between 2016-Q3 and 2016-Q4 with QoQ growth bet
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">master_df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -12756,7 +12703,7 @@ So that I can compare QoQ growth between 2016-Q3 and 2016-Q4 with QoQ growth bet
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[92]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[26]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12852,7 +12799,7 @@ So that I can compare QoQ growth between 2016-Q3 and 2016-Q4 with QoQ growth bet
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Descibe is another very usable feature of Pandas DataFrames. It gives all the basic stats for numeric columns.</p>
+<p>Describe is another very usable feature of Pandas DataFrames. It gives all the basic stats for numeric columns.</p>
 <p>Below is a glimpse of "where" clause or filtering in pandas DF. We can do multiple ways of filtering on rows and columns and multiple functions for that like - ix, iloc, loc or the Simple way I have explained below to filter on 
 Aug-2016 data.</p>
 <p>Also note the column names now are much usable and simple. I have still not fixed my Index which I will do later when I would use it !!</p>
@@ -12862,7 +12809,7 @@ Aug-2016 data.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">master_df</span><span class="p">[</span><span class="n">master_df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;10/2016&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
@@ -12876,7 +12823,7 @@ Aug-2016 data.</p>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[37]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[27]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12896,42 +12843,42 @@ Aug-2016 data.</p>
   <tbody>
     <tr>
       <th>NaN</th>
-      <td>90</td>
-      <td>LAKSHMI VILAS BANK LTD</td>
-      <td>159334</td>
-      <td>11807.964529</td>
-      <td>197355</td>
-      <td>14655.195091</td>
+      <td>94</td>
+      <td>MASHREQ BANK</td>
+      <td>304</td>
+      <td>184.291006</td>
+      <td>34</td>
+      <td>4.406208</td>
       <td>2016-10-01</td>
     </tr>
     <tr>
       <th>NaN</th>
-      <td>21</td>
-      <td>BANK OF MAHARASHTRA</td>
-      <td>747864</td>
-      <td>52380.501347</td>
-      <td>1857388</td>
-      <td>80170.831948</td>
+      <td>143</td>
+      <td>SUTEX COOP BANK</td>
+      <td>3427</td>
+      <td>231.691878</td>
+      <td>8598</td>
+      <td>509.008875</td>
       <td>2016-10-01</td>
     </tr>
     <tr>
       <th>NaN</th>
-      <td>41</td>
-      <td>DCB BANK LIMITED</td>
-      <td>156115</td>
-      <td>11170.314741</td>
-      <td>108218</td>
-      <td>16441.198072</td>
+      <td>154</td>
+      <td>THE KANGRA CENTRAL COOP BANK LTD</td>
+      <td>19555</td>
+      <td>749.628801</td>
+      <td>27303</td>
+      <td>1197.956404</td>
       <td>2016-10-01</td>
     </tr>
     <tr>
       <th>NaN</th>
-      <td>164</td>
-      <td>TUMKUR GRAIN MERCHANTS COOP BANK</td>
-      <td>2594</td>
-      <td>147.798591</td>
-      <td>1968</td>
-      <td>216.267325</td>
+      <td>165</td>
+      <td>The Gadchiroli Dist Co-Op Bank</td>
+      <td>3366</td>
+      <td>73.319838</td>
+      <td>17822</td>
+      <td>379.678560</td>
       <td>2016-10-01</td>
     </tr>
   </tbody>
@@ -12950,7 +12897,7 @@ Aug-2016 data.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Analysis-1:-MoM-Aggregated-NEFT-Transactions">Analysis 1: MoM Aggregated NEFT Transactions<a class="anchor-link" href="#Analysis-1:-MoM-Aggregated-NEFT-Transactions">&#182;</a></h2><p>Here I would be aggrgating (sum) of all NEFT transactions by value (Rs) on monthly basis. This is for all the banks hence all NEFT transactions in India in that month</p>
+<h2 id="Analysis-1:-MoM/QoQ-Aggregated-NEFT-Transactions">Analysis 1: MoM/QoQ Aggregated NEFT Transactions<a class="anchor-link" href="#Analysis-1:-MoM/QoQ-Aggregated-NEFT-Transactions">&#182;</a></h2><p>Here I would be aggregating (sum) of all NEFT transactions by value (Rs) on monthly basis. This is for all the banks hence all NEFT transactions in India in that month</p>
 <p>In first step I am doing a groupby on Date(which is monthly in this case) and aggregating 2 required columns - 
             Total Debit Txns and Total Credit Txns
 on monthly basis for all the banks and Results are loaded in a new DF named - grpd1</p>
@@ -12962,7 +12909,7 @@ on monthly basis for all the banks and Results are loaded in a new DF named - gr
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">grpd1</span> <span class="o">=</span> <span class="n">master_df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>\
@@ -12977,7 +12924,7 @@ on monthly basis for all the banks and Results are loaded in a new DF named - gr
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">grpd1</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -12991,7 +12938,7 @@ on monthly basis for all the banks and Results are loaded in a new DF named - gr
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[94]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[29]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13042,7 +12989,7 @@ on monthly basis for all the banks and Results are loaded in a new DF named - gr
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">grpd1</span><span class="p">[</span><span class="s1">&#39;Total Credt + Debit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grpd1</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -13057,7 +13004,7 @@ on monthly basis for all the banks and Results are loaded in a new DF named - gr
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13102,12 +13049,12 @@ on monthly basis for all the banks and Results are loaded in a new DF named - gr
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">grpd1</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">%c</span><span class="s1">hange&#39;</span><span class="p">]</span> <span class="o">=</span> \
     <span class="p">((</span><span class="n">grpd1</span><span class="p">[</span><span class="s1">&#39;Total Credt + Debit&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">grpd1</span><span class="p">[</span><span class="s1">&#39;Total Credt + Debit&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="n">grpd1</span><span class="p">[</span><span class="s1">&#39;Total Credt + Debit&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span>
-<span class="n">grpd1</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">grpd1</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13118,7 +13065,7 @@ on monthly basis for all the banks and Results are loaded in a new DF named - gr
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[31]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13161,20 +13108,6 @@ on monthly basis for all the banks and Results are loaded in a new DF named - gr
       <td>1.639442e+07</td>
       <td>28.681323</td>
     </tr>
-    <tr>
-      <th>2016-01-01</th>
-      <td>7.086750e+06</td>
-      <td>7.086752e+06</td>
-      <td>1.417350e+07</td>
-      <td>-13.546780</td>
-    </tr>
-    <tr>
-      <th>2016-02-01</th>
-      <td>7.278602e+06</td>
-      <td>7.278602e+06</td>
-      <td>1.455720e+07</td>
-      <td>2.707182</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -13198,7 +13131,7 @@ on monthly basis for all the banks and Results are loaded in a new DF named - gr
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">grpd1_temp</span> <span class="o">=</span> <span class="n">grpd1</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -13213,7 +13146,7 @@ on monthly basis for all the banks and Results are loaded in a new DF named - gr
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[101]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[32]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -13244,7 +13177,7 @@ Name: Total Credt + Debit, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">grpd2</span> <span class="o">=</span> <span class="n">grpd1</span><span class="o">.</span><span class="n">to_period</span><span class="p">()</span>
@@ -13259,7 +13192,7 @@ Name: Total Credt + Debit, dtype: float64</pre>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[33]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13322,7 +13255,7 @@ Name: Total Credt + Debit, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">grpd2</span><span class="p">[</span><span class="s1">&#39;Total Credt + Debit&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;MOM Aggregated NEFT - Rs in Million&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -13922,9 +13855,9 @@ AElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <B><I>Inferences</I></B><ul>
-<li>We can see a sudden spike in NEFT transactions after Nov 2016, which is an impact of demonitization</li>
+<li>We can see a sudden spike in NEFT transactions after Nov 2016, which is an impact of demonetization</li>
 <li>Dec, Jan and Feb look flat, post a spike after Nov'16 </li>
-<li>March 2017 has git maximum NEFT transactions in last 15 months. Reasons: End of Financial year, Tax payments etc. But  the change between Feb'16 - March'16 and Feb'17 - March'17 looks comparable. Let us see % changes to validate this understanding</li>
+<li>March 2017 has get maximum NEFT transactions in last 15 months. Reasons: End of Financial year, Tax payments etc. But the change between Feb'16 - March'16 and Feb'17 - March'17 looks comparable. Let us see % changes to validate this understanding</li>
 </ul>
 
 </div>
@@ -13932,7 +13865,7 @@ AElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ax1</span> <span class="o">=</span> <span class="n">grpd2</span><span class="p">[</span><span class="s1">&#39;</span><span class="si">%c</span><span class="s1">hange&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Month on Month </span><span class="si">% c</span><span class="s1">hange&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
@@ -13954,11 +13887,11 @@ AElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[41]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[35]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Annotation at 0xd3a0b38&gt;</pre>
+<pre>&lt;matplotlib.text.Annotation at 0xac1e2b0&gt;</pre>
 </div>
 
 </div>
@@ -14309,7 +14242,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">grpd3</span> <span class="o">=</span> <span class="n">grpd2</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;Q-MAR&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -14921,7 +14854,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4><I>Inference: yes we see a +ve change post demonitization in NEFT transaction when compared to FY16. Lets keep a watch on how persistant the change is during next 1-2 Quarters</h4>
+<h4><I>Inference: Yes we see a +ve change in NEFT transactions, post demonitization, when compared to FY16. Lets keep a watch on how persistant the change is during next 1-2 Quarters</h4>
 
 </div>
 </div>
@@ -14931,7 +14864,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Get-Scatter-for-Highest-NEFT-transactions">Get Scatter for Highest NEFT transactions<a class="anchor-link" href="#Get-Scatter-for-Highest-NEFT-transactions">&#182;</a></h1>
+<h2 id="Analysis-2-:-Get-Scatter-for-Highest-NEFT-transactions">Analysis 2 : Get Scatter for Highest NEFT transactions<a class="anchor-link" href="#Analysis-2-:-Get-Scatter-for-Highest-NEFT-transactions">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14947,7 +14880,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">master_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -14961,7 +14894,7 @@ AABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[21]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[37]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -14981,32 +14914,32 @@ AABJRU5ErkJggg==
   <tbody>
     <tr>
       <th>NaN</th>
-      <td>97</td>
-      <td>NATIONAL AUSTRALIA BANK</td>
-      <td>2</td>
-      <td>0.030642</td>
-      <td>6</td>
-      <td>0.568836</td>
-      <td>2015-12-01</td>
+      <td>31</td>
+      <td>CATHOLIC SYRIAN BANK LTD.</td>
+      <td>140318</td>
+      <td>9065.082529</td>
+      <td>145707</td>
+      <td>9094.832508</td>
+      <td>2016-12-01</td>
     </tr>
     <tr>
       <th>NaN</th>
-      <td>42</td>
-      <td>DELHI STATE CO OP BANK LTD</td>
-      <td>1071</td>
-      <td>52.230965</td>
-      <td>2000</td>
-      <td>69.295726</td>
-      <td>2015-12-01</td>
+      <td>63</td>
+      <td>INDUSTRIAL AND COM BANK OF CHINA LT</td>
+      <td>171</td>
+      <td>21.680278</td>
+      <td>76</td>
+      <td>214.653665</td>
+      <td>2016-05-01</td>
     </tr>
     <tr>
       <th>NaN</th>
-      <td>86</td>
-      <td>LAKSHMI VILAS BANK LTD</td>
-      <td>129282</td>
-      <td>7961.953289</td>
-      <td>158489</td>
-      <td>11814.816921</td>
+      <td>46</td>
+      <td>DHANLAXMI BANK LTD</td>
+      <td>117097</td>
+      <td>4667.791604</td>
+      <td>103445</td>
+      <td>5409.723190</td>
       <td>2016-01-01</td>
     </tr>
   </tbody>
@@ -15032,7 +14965,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">master_df2</span> <span class="o">=</span> <span class="n">master_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
@@ -15045,7 +14978,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">master_df2</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -15059,7 +14992,7 @@ AABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[39]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -15126,7 +15059,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">grpd11</span> <span class="o">=</span> <span class="n">master_df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;BANK&#39;</span><span class="p">)</span>
@@ -15142,7 +15075,7 @@ AABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[40]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -15213,14 +15146,16 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># To get Aggregated Value of Transactions </span>
-<span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;Total Credit + Debit Amt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;TOTAL OUTWARD DEBITS AMOUNT (Rs. Million)&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;RECEIVED INWARD CREDITS AMOUNT (Rs. Million)&#39;</span><span class="p">]</span>
+<span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;Total Credit + Debit Amt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;TOTAL OUTWARD DEBITS AMOUNT (Rs. Million)&#39;</span><span class="p">]</span> \
+                    <span class="o">+</span> <span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;RECEIVED INWARD CREDITS AMOUNT (Rs. Million)&#39;</span><span class="p">]</span>
 
 <span class="c1"># To get Aggregated Number of Transactions </span>
-<span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;Total Credit + Debit Txns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;TOTAL OUTWARD DEBITS NO. OF TRANSACTIONS&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;RECEIVED INWARD CREDITS NO. OF TRANSACTIONS&#39;</span><span class="p">]</span>
+<span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;Total Credit + Debit Txns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;TOTAL OUTWARD DEBITS NO. OF TRANSACTIONS&#39;</span><span class="p">]</span> \
+                    <span class="o">+</span> <span class="n">grpd12</span><span class="p">[</span><span class="s1">&#39;RECEIVED INWARD CREDITS NO. OF TRANSACTIONS&#39;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -15230,13 +15165,15 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">grpd12</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Total Credit + Debit Amt&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>\
-            <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Total Credit + Debit Txns&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Total Credit + Debit Amt&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Leader Banks&#39;</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Total Credit + Debit Txns&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Total Credit + Debit Amt&#39;</span><span class="p">,</span>\
+                              <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Leader Banks&#39;</span><span class="p">)</span>
 
-<span class="n">grpd13</span> <span class="o">=</span> <span class="n">grpd12</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Total Credit + Debit Amt&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)[[</span><span class="s1">&#39;Total Credit + Debit Amt&#39;</span><span class="p">,</span><span class="s1">&#39;Total Credit + Debit Txns&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">grpd13</span> <span class="o">=</span> <span class="n">grpd12</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Total Credit + Debit Amt&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>\
+        <span class="p">[[</span><span class="s1">&#39;Total Credit + Debit Amt&#39;</span><span class="p">,</span><span class="s1">&#39;Total Credit + Debit Txns&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grpd13</span><span class="o">.</span><span class="n">values</span><span class="p">):</span>    
     <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">grpd13</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset points&#39;</span><span class="p">)</span>
@@ -15580,7 +15517,7 @@ c/6aDo5+pIAAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">sbi_hdfc</span> <span class="o">=</span> <span class="n">master_df</span><span class="p">[(</span><span class="n">master_df</span><span class="p">[</span><span class="s1">&#39;BANK&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;STATE BANK OF INDIA&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">master_df</span><span class="p">[</span><span class="s1">&#39;BANK&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;HDFC BANK&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -15596,7 +15533,7 @@ c/6aDo5+pIAAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">sbi_hdfc</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span><span class="s1">&#39;BANK&#39;</span><span class="p">,</span><span class="s1">&#39;Total Cr + Dr&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
@@ -15610,11 +15547,11 @@ c/6aDo5+pIAAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[34]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[44]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xb49a470&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xb6e7e10&gt;</pre>
 </div>
 
 </div>
@@ -15881,28 +15818,30 @@ gg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Well this is bit of a Surprise !! HDFC has started leading SBI in terms of Aggregated Value of NEFT transactions after Jan'17. So if we talk about 2017 only, HDFC will be the leader in terms of NEFT Txn Value. let me now again to a scatter for only 2017 to see the <B>Leader Banks</B></p>
-
+<B><I> Inference:  Well this is bit of a Surprise !! HDFC has started leading SBI in terms of Aggregated Value of NEFT transactions after Jan'17. So if we talk about 2017 only, HDFC is the leader in terms of NEFT Txn Value. </I></B>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Analysis-3:-Mobile-Banks---Let-us-see-the-MoM-trend-for-Airtel-Mobile-Bank.-I-am-expecting-a-spike-post-demonitisation-!!">Analysis 3: Mobile Banks - Let us see the MoM trend for Airtel Mobile Bank. I am expecting a spike post demonitisation !!<a class="anchor-link" href="#Analysis-3:-Mobile-Banks---Let-us-see-the-MoM-trend-for-Airtel-Mobile-Bank.-I-am-expecting-a-spike-post-demonitisation-!!">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dfx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">master_df2</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="s1">&#39;2017&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;BANK&#39;</span><span class="p">)</span>\
-    <span class="o">.</span><span class="n">sum</span><span class="p">()[[</span><span class="s1">&#39;TOTAL OUTWARD DEBITS NO. OF TRANSACTIONS&#39;</span><span class="p">,</span><span class="s1">&#39;RECEIVED INWARD CREDITS NO. OF TRANSACTIONS&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
-<span class="n">master_df2</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="s1">&#39;2017&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;BANK&#39;</span><span class="p">)</span>\
-    <span class="o">.</span><span class="n">sum</span><span class="p">()[[</span><span class="s1">&#39;TOTAL OUTWARD DEBITS AMOUNT (Rs. Million)&#39;</span><span class="p">,</span><span class="s1">&#39;RECEIVED INWARD CREDITS AMOUNT (Rs. Million)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)],</span>
-          <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-
-<span class="n">dfx</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Total Txns&#39;</span><span class="p">,</span><span class="s1">&#39;Total Amt&#39;</span><span class="p">]</span>
-
-<span class="n">ax_new</span> <span class="o">=</span> <span class="n">dfx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Leader in 2017&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dfx</span><span class="o">.</span><span class="n">values</span><span class="p">):</span>    
-    <span class="n">ax_new</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">dfx</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span><span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset points&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">master_df2</span><span class="p">[</span><span class="n">master_df2</span><span class="p">[</span><span class="s1">&#39;BANK&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;AIRTEL PAYMENTS BANK LIMITED&#39;</span><span class="p">][[</span><span class="s1">&#39;TOTAL OUTWARD DEBITS AMOUNT (Rs. Million)&#39;</span><span class="p">]]</span>\
+                <span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Rs in Millions&#39;</span><span class="p">)</span>
+    
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">master_df2</span><span class="p">[</span><span class="n">master_df2</span><span class="p">[</span><span class="s1">&#39;BANK&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;AIRTEL PAYMENTS BANK LIMITED&#39;</span><span class="p">][[</span><span class="s1">&#39;TOTAL OUTWARD DEBITS AMOUNT (Rs. Million)&#39;</span><span class="p">]]</span>\
+                <span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span><span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;offset points&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15917,259 +15856,255 @@ gg==
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-/QqDBw+jru7GZvUtk8qWSutvueUW7rnnHk4++eR22x900EGsXr2an/70p01lTz75ZJszmqV9L1iw
-gA8++ICtt96a6dOnc/nll7NkyRKWLFnCCy+8wEsvvcTy5cub7T927FjefPNNnnii9SMIV111FQMH
-DuSMM87ocHySerZK31O6Tk2aNKnpc21tLbW1tVWLRZLWp8bGRs488xxWrpzJypXDgSc488wxHHLI
-Qc3uz+zI1KlT+eUvf8k777zDXnvtxX333df0QFJ7+/7qV7/i61//Ot/97nfp378/Q4YMYerUqa3a
-rVq1ipqamqbk9PrrryciuOmmm7jzzjubtZ0wYQIzZsxgv/32a1Z+ySWXMH78+KZYSmP6+c9/zrhx
-47jooov43ve+1+E4pWqor6+nvr6+2mH0aNHZb9Yf+QARQ4DfZubeHbS5DHg7M6/soE1WOlZJ6q5m
-zZrF2LFf4a235jSVbb55Db///bWMHj26ipFJaktEkJkd/6aoZio6UxoR04FaYOuIeB64DOgHZGZe
-FxGfAmYDA4APIuLrwB6Z+XYl45KknmbIkCGsXr0MeAIozJSuWfMcQ4YMqWpckrSuVPrp+5Mz828z
-82OZuUNm/iwzr83M64r1r2bm9pm5RWZuVWxjQipJLQwaNIhp066hf/8xbL55Df37j2HatGuaLt1L
-G6LJkyez1157MWLECGpqapg1axbHHnssI0eOZJdddmGLLbagpqaGmpqapreMvfHGG/Tr14/rrruu
-qZ/999+fmpoaBg8ezCc/+cmmN5s991zhF78RI0Y0lX3jG99oFUfpG9P22GMPzj333Gb1EdE3Il6L
-iO+0KK+PiFkl26MiYmbx899FxG9L6q6IiDsjYuOWx4+ISyNiYUQsiIh7I2KPkrplEfF4RMyNiIaI
-2L+N/VcU/xwcER9ExLkldT+OiFOLn38WEUuKfS2IiJ9HxLYlbZdGxFYl2+OL/e3a6pvWhh51T6kk
-bcgmTjyRQw45iGXLljFkyBATUm3QHn30Ue68804ee+wxNtpoI/70pz+xevXqpreG3X///Vx55ZX8
-5je/abbfzTffzOGHH05dXR1f/vKXm/qCwqt558yZw49+9KOm9n369KG+vr7TZdLOP/98zj+/8B6g
-z33ucy2rxwINwBeBi0vKExgUEYdl5t0lZaX1RMSlwGeAIzJzTWnHEXEesD+wd2a+GxFjgd9ExB6Z
-uRr4AKjNzHaX6GxxzNeAr0fEtZnZ1pKd/5SZtxaP/Q3gvojYs9i25X2WJwG3AxOBjteow6fvJalH
-GTRoEKNHjzYh1Qbv5Zdf5hOf+AQbbVSYX9tqq63YZpttOt2vrq6OK664gtdee42XXnqp0/aZWdZy
-ZGufe1m1ahXvvvtuy+qJwDXAkjZmKn8AXNpOt1F84+VhwLhiktnShcC5mfluMY57gIeBv1/bB13L
-9xqBe4EvddYwM6cCLwNHlBxrbeCbAZ8GzqWQnHbKpFSSJPU4hx56KM8//zzDhg3j3HPP5YEHHuh0
-nxdeeIHGxkaGDx/Occcdx4033tjpPlBYHm3t5ft/+Zd/abPNVVddRU1NDdtuuy277vrXq9UR8TFg
-DPDfwE1A6TpsCTwCvBsRf9dGtwcAZ1OYIf1Ly8qIGABsmpnPtaiaA+xZsn1f8ZL7I52NtRjT94B/
-is6W9CiYCwxro/wY4O7MXA68FhEjO+vIpFSSJPU4m222GQ0NDVx33XUMGjSIk046ieuvb++t5gU3
-3ngjxx13HADHHXcc06dPL+tY9fX1TW87+/rXv95mm/PPP5+GhgZee+013n672eMxRwH1xVnOXwPj
-S5K9tX9OBv5PG90+W2xzaFmBtq82M0dm5mfKaZyZy4BH+etsa0faS1wnUkjCAW6meTLeJpNSSZLU
-bXX0FrOI4POf/zyTJk3ixz/+MbfcckuHfdXV1fGzn/2MoUOHcvTRR/Pkk0+yePHiTmPoypKUffv2
-5fDDDy8tmgiMjYglFGYwtwIOatH/TGATCveGlnoF+AIwNSJq24hrBfBOcfnNUqOAp0q2P8zSVFOA
-i8poNxJ4urQgIrakMMZpxXFfABzfWUcmpZIkqVvq6C1mCxcu5Nlnn23afuyxxxg8eHC7fS1cuJB3
-3nmH5cuXs2TJEpYuXcq3vvWtsmdLO7M2cc3MpreeFS+vfw7YPjOHZuaOFO6xbGvWcDKF+0Nb9vss
-cCzwi4gY0cZ+/xf4UURsUjzmIRQu+3dlYNHyc2Y+QyHZPLq9thHxNWAb4O4WbY4Hrs/MHYvjHgws
-jYgDOwrCpFSSJHU7pW8xe+utOaxcOZMzzzynacb07bff5rTTTmOvvfZin332Yf78+c3e/NjSjBkz
-mDBhQrOyY489lhkzZnQYR0QwZsyYpqWlvvSlL7XZburUqdTU1DB8+PDSB6MmAPe2eIr9N8BRxaWd
-mqZgM/MuCk++t5qWzczZwBnAryNixxZ1P6aw5vuTETEfuAQ4Zu2DT23114ZWT/wXTQa2bVH2/eL9
-qc9QmJEdUzK+te1OBH7V4hi3Upg1blfF3+i0rvhGJ0mSNhw9/S1mvtGp65wplSRJ3U7zt5iBbzHr
-/UxKJUlSt+NbzDY8Xr6XJEndVmNjY498i5mX77vOpFSSJGkdMyntOi/fS5IkqepMSiVJklR1JqWS
-JEmqOpNSSZIkVZ1JqSRJkqrOpFSSJElVZ1IqSZKkqjMplSRJUtWZlEqSJKnqTEolSZJUdRVNSiNi
-WkS8GhFPdNDmRxGxKCIei4h9KhmPJEmSuqdKz5T+DDisvcqIOALYKTN3Ac4G/q3C8UiSJKkbqmhS
-mpkPAW920OQY4Ppi2z8AAyPiU5WMSZIkSd1Pte8p3RZYXrL9YrFMkiRJG5BqJ6WSJEkSG1X5+C8C
-25dsb1csa9OkSZOaPtfW1lJbW1upuCRJkspWX19PfX19tcPo0SIzK3uAiCHAbzNz7zbqvgCcm5lH
-RsT+wNTM3L+dfrLSsUqSJK0LEUFmRrXj6EkqOlMaEdOBWmDriHgeuAzoB2RmXpeZd0bEFyLiWeAd
-4PRKxiNJkqTuqeIzpeuKM6WSJKmncKa063zQSZIkSVVnUipJkqSqMymVJElS1ZmUSpIkqepMSiVJ
-klR1JqWSJEmqOpNSSZIkVZ1JqSRJkqrOpFSSJElVZ1IqSZKkqjMplSRJUtWZlEqSJKnqTEolSZJU
-dSalkiRJqjqTUkmSJFWdSakkSZKqzqRUkiRJVWdSKkmSpKozKZUkSVLVmZRKkiSp6kxKJUmSVHUm
-pZIkSaq6iielEXF4RCyIiIURcVEb9VtExK0R8XhEPBoRe1Q6JkmSJHUvFU1KI6IP8BPgMGBPYGJE
-DGvR7GJgbmaOAE4DflTJmCRJktT9VHqmdD9gUWY+l5lrgBnAMS3a7AHcB5CZzwBDImJQheOSJElS
-N1LppHRbYHnJ9gvFslKPA8cCRMR+wA7AdhWOS5IkSd1Id3jQ6bvAlhHRAJwLzAXer25IkiRJWp82
-qnD/L1KY+Vxru2JZk8xcAZyxdjsilgJL2ups0qRJTZ9ra2upra1dd5FKkiR9SPX19dTX11c7jB4t
-MrNynUf0BZ4BDgZeBv4ITMzM+SVtBgJ/ycw1EXEWcEBmfqmNvrKSsUqSJK0rEUFmRrXj6EkqOlOa
-me9HxHnA7yjcKjAtM+dHxNmF6rwO2B34z4j4AHgKOLOSMUmSJKn7qehM6brkTKkkSeopnCntuu7w
-oJMkSZI2cCalkiRJqjqTUkmSJFWdSakkSZKqzqRUkiRJVWdSKkmSpKozKZUkSVLVmZRKkiSp6kxK
-JUmSVHUmpZIkSao6k1JJkiRVnUmpJEmSqs6kVJIkSVVnUipJkqSqMymVJElS1ZmUSpIkqepMSiVJ
-klR1JqWSJEmqOpNSSZIkVV2nSWlE7FBOmSRJkvRhlTNTeluZZZIkSdKHslF7FRGxK7A7MDAiji6p
-2hzYpNKBSZIkacPRblIK7AkcC2wBHF9SvgI4u9wDRMThwFQKs7LTMvN7Leq3Bm4A/gboC1yZmT8v
-t39JkiT1fJGZHTeIODAzH/pQnUf0ARYCBwMvAbOAkzJzQUmby4BNMvNbEfEJ4BngU5n5Xou+srNY
-JUmSuoOIIDOj2nH0JB3NlK71fER8HxhS2j4zjy1j3/2ARZn5HEBEzACOARaUtHkF2Lv4eQDwRsuE
-VJIkSb1bOUnpb4DrgXuAD7rY/7bA8pLtFygkqqX+Hbg3Il4CPg6c2MVjSJIkqYcrJyldnZk/rGAM
-3wIez8wxEbETcE9EDM/Mtyt4TEmSJHUj5SSlV0fEpcDdwLtrCzPziTL2fREoXdN0u2JZqQOAycU+
-F0fEUmAYMLtlZ5MmTWr6XFtbS21tbRkhSJIkVVZ9fT319fXVDqNHK+dBpyuAM4El/PXyfWbm5zvt
-PKIvhQeXDgZeBv4ITMzM+SVtrgT+X2ZeHhGfopCMjsjMP7XoywedJElSj+CDTl1XzkzpScCQzHy3
-05YtZOb7EXEe8Dv+uiTU/Ig4u1Cd1wFTgJ9FxONAABe2TEglSZLUu5UzU/pr4MzMfH39hNRuHM6U
-SpKkHsGZ0q4rZ6Z0ALAgIv5A83tKy1kSSpIkSepUOUnp5IpHIUmSpA1ap5fvW+0QsT+Fh5W+XpmQ
-2j2ul+8lSVKP4OX7ritnppSI2Bs4GTiBwutCb6lkUJIkSdqwtJuURsRQYGLx6y3gZmDjzPzceopN
-kiRJG4h2L99HxAfA7cBXS95dvyQzh67H+Erj8fK9JEnqEbx833V9Oqg7AVgNzIyIn0TE5ymsIypJ
-kiStU+WsUzoAmEDhMv7fAdOAX2XmfZUPr1kczpRKkqQewZnSruvS0/cR8QkKM6gnZubfVSyqto9t
-UipJknoEk9Ku6/KSUNViUipJknoKk9Ku6+ieUkmSJGm9MCmVJElS1ZmUSpIkqeo6Wjz/TaCtmzgD
-yMzcqmJRSZIkaYPS0WtGP7HeopAkSdIGrd2kNDPfL92OiK2ATUqKXqpUUJIkSdqwdHpPaUQcGREL
-gReAPxT/XK8L50uSJKl3K+dBp8nAAcAzmbk9cBjwYEWjkiRJ0galnKT0vcxsBPpEYQX7e4D9KhyX
-JEmSNiAdPei01lsR8XHgIeD6iHgNWFnZsCRJkrQh6fQ1oxExAPgLhVnVU4GBwPWZ+Xrlw2sWh68Z
-lSRJPYKvGe26ci7ffysz38/MNZk5LTN/CJxf6cAkSZK04SgnKT28jbIjyz1ARBweEQsiYmFEXNRG
-/T9FxNyIaIiIJyPivYjYotz+JUmS1PO1e/k+Is4GvgLsCjxTUjUAmJOZJ3XaeUQfYCFwMIV1TWcB
-J2XmgnbaHwV8IzMPaaPOy/eSJKlH8PJ913X0oNNNwL3AFOCbJeUrMvO1MvvfD1iUmc8BRMQM4Big
-zaQUmAjUldm3JEmSeol2L99n5puZ+WxmHk/hTU5ji1+DutD/tsDyku0XimWtRER/CrcK3NKF/iVJ
-ktQLlPNGp3OBm4Edil83RcQ5FYhlHPBQZv65An1LkiSpGytnndKzgf0y822AiPgO8D/ANWXs+yKF
-RHat7YplbTmJTi7dT5o0qelzbW0ttbW1ZYQgSZJUWfX19dTX11c7jB6tnHVKnwRGZebq4vbHgNmZ
-uXennUf0pfCQ1MHAy8AfgYmZOb9Fu4HAEmC7zGxzYX4fdJIkST2FDzp1XbszpRGxUWa+B/wC+ENE
-rL3XcwLwn+V0npnvR8R5wO8o3CowLTPnF5/sz8y8rth0PHB3ewmpJEmSereOloRqyMya4uf9gAOL
-VQ9m5qz1FF9pPM6USpKkHsGZ0q7r6J7Spm9kZv6RwqV3SZIkaZ3rKCkdFBHtvk60+LpRSZIk6SPr
-KCntC3yckhlTSZIkqRLKuqe0O/CeUkmS1FN4T2nXdbR4vt9ISZIkrRcdzZRulZl/Ws/xtMuZUkmS
-1FM4U9p1nS6e312YlEqSpJ7CpLTrOrp8L0mSJK0XJqWSJEmqOpNSSZIkVZ1JqSRJkqrOpFSSJElV
-Z1IqSZKkqjMplSRJUtWZlEqSJKnqTEolSZJUdSalkiRJqjqTUkmSJFWdSakkSZKqzqRUkiRJVWdS
-KkmSpKozKZUkSVLVVTwpjYjDI2JBRCyMiIvaaVMbEXMjYl5EzKx0TJIkSepeIjMr13lEH2AhcDDw
-EjALOCkzF5S0GQj8D3BoZr4YEZ/IzNfb6CsrGaskSdK6EhFkZlQ7jp6k0jOl+wGLMvO5zFwDzACO
-adHmZOCWzHwRoK2EVJIkSb1bpZPSbYHlJdsvFMtK7QpsFREzI2JWRJxS4ZgkSZLUzWxU7QAoxFAD
-HARsBjwSEY9k5rPVDUuSJEnrS6WT0heBHUq2tyuWlXoBeD0zVwGrIuIBYATQKimdNGlS0+fa2lpq
-a2vXcbiSJEldV19fT319fbXD6NEq/aBTX+AZCg86vQz8EZiYmfNL2gwDfgwcDnwM+ANwYmY+3aIv
-H3SSJEk9gg86dV1FZ0oz8/2IOA/4HYX7V6dl5vyIOLtQnddl5oKIuBt4AngfuK5lQipJkqTeraIz
-peuSM6WSJKmncKa063yjkyRJkqrOpFSSJElVZ1IqSZKkqjMplSRJUtWZlEqSJKnqTEolSZJUdSal
-kiRJqjqTUkmSJFWdSakkSZKqzqRUkiRJVWdSKqnLBgwY0PR50aJFHHnkkey2227su+++nHTSSTQ2
-NnL//fczbty4pnZ33XUXo0ePZq+99mLUqFFccMEFAFx++eX88Ic/bHWMyy+/nO22246amhr22GMP
-zj333Gb177//Pp/85Ce5+OKLm5XX1tYyevTopu05c+YwZswYgFYxXXrppXzhC19gzZo1zfo4/fTT
-ufXWW5u2H3/8cUaOHElNTQ1bb701Q4cOZeTIkRxxxBEsXryYTTfdlFGjRrHHHnvwmc98hhtuuKHs
-76UkqcCkVFKXRRRe5/zuu+9y5JFHcu655/LMM88we/ZszjnnHBobG5u1mzdvHl/96leZPn068+bN
-Y/bs2ey8886dHuf888+noaGBp59+mieeeIL777+/qe6ee+6hpqaGW265pVVsjY2N3H333a3iLf18
-xRVX8Mgjj3Dbbbex8cYbdxjHiBEjmDt3Lg0NDRx55JFMnTqVuXPnctdddwEwbNgw5syZw9NPP80N
-N9zA97//fX75y192Oj5J0l+ZlEr60KZPn85nP/tZvvCFLzSVff7zn2ePPfZo1u4HP/gBl156Kbvs
-sgtQSAzPPvvsTvvPTABWrVrFu+++y5ZbbtlUV1dXxznnnMPQoUN59NFHm+13wQUXcMUVV7Tb5w9/
-+EPuvvtufvvb39KvX7/yBtsipvbstNNOXHnllfzLv/xLl/qVpA2dSamkD23evHmMGjVqnbVr6aqr
-rqKmpoYUud5BAAAX3ElEQVRtt92WXXfdleHDhwOFGdqZM2dy+OGHc8IJJzB9+vSmfSKCz3zmM3zs
-Yx9rNrO61sMPP8y1117LXXfdxaabbtrlmMpRU1PDM888U5G+Jam3MimV1KbGxkZmzZrVdCm+GtZe
-vn/ttdd4++23uemmmwC4/fbbqa2tpV+/fhxzzDHcdtttTTOYa/+85JJL+Od//udWfe68885kJr/7
-3e8qFndns6mSpNZMSiW1Uld3I4MHD2Ps2K8wePAw6upubLPdnnvuyezZszvtr9x27enbty+HH344
-DzzwQDG+Ou655x6GDh3KqFGj+NOf/sR9993XbJ8xY8awatWqVpf2t9lmG+68806+8Y1vUF9f/6Fj
-6khDQwO77757RfqWpN7KpFRSM42NjZx55jmsXDmTt96aw8qVMznzzHOazZiunQk8+eSTeeSRR5oe
-+AF48MEHefrpp5v1ecEFFzBlyhQWLVoEwAcffMC1117baSyls58PP/wwO+20EytWrODBBx9k+fLl
-LFmyhKVLl3L11Vc3u4S/1iWXXML3v//9VuU777wzt956K6eccgqPP/54h8cuR2nbJUuWcOGFF/K1
-r32t7P0lSSalklpYtmwZ/foNAYYXS4az8caDWbZsWVObtU+wb7LJJtx+++386Ec/YrfddmOvvfbi
-X//1Xxk0aFCzPvfee2+mTp3KxIkT2XPPPRk+fDhLly7tNJapU6dSU1PD8OHD+eCDDzjnnHP41a9+
-xcEHH8xGG23U1O7oo4/m9ttvZ82aNc2etD/iiCP45Cc/2axsrX333Zf/+I//4Jhjjmkzlq985Svs
-sMMObL/99hxwwAGtxl5q4cKFjBo1it13352TTz6ZCy64gJNPPrnT8UmS/ip6yr1PEZE9JVapJ2ts
-bGTw4GGsXDmTQmL6BP37j+G55xa0SjYlSW2LCDKz9W+xapczpZKaGTRoENOmXUP//mPYfPMa+vcf
-w7Rp15iQSpIqyplSSW1qbGxk2bJlDBkyxIRUkrrImdKuMymVJElax0xKu67il+8j4vCIWBARCyPi
-ojbq/y4i/hwRDcWvSysdkyRJkrqXjTpv8uFFRB/gJ8DBwEvArIj4dWYuaNH0gcw8upKxSJIkqfuq
-9EzpfsCizHwuM9cAM4Bj2mjn9LYkSdIGrNJJ6bbA8pLtF4plLX0mIh6LiDsiYo8KxyRtEG677Tb6
-9OnDwoULm8rmzJnDXnvtxXvvvQfA4sWL2WmnnXj77be5//77GTduHACvvfYa48aNY5999mHPPffk
-qKOOavMYffv2paamhn322Yd999231duTpk6dSv/+/VmxYkVT2f3330+fPn244447msrGjRvX9Lam
-MWPG0NDQAMDSpUvZddddueeee9bBd0SS1J11hyWh5gA7ZOY+FC7131bleKReYcaMGRx11FHU1dU1
-lY0aNYra2lp+8IMfAHDeeecxZcoUPv7xjwN/XRj+29/+NoceeiiPPfYYTz31FN/97nfbPMZmm21G
-Q0MDjz32GN/5znf45je/2SqGsWPHcuuttzYr32677Zg8eXKH8b/wwgscccQRXHXVVYwdO7Zrg5ck
-9TgVvacUeBHYoWR7u2JZk8x8u+TzXRFxTURslZl/atnZpEmTmj7X1tZSW1u7ruOVeoV33nmHP/zh
-DzzwwAMceuihXHbZZU11kydPpqamho022oj333+fE044odX+L7/8MocddljT9l577dXmcUpXxHjr
-rbfYaqutmraXLFnCmjVruOSSS/j2t7/Naaed1lQ3YsQI3nvvPe69914OPvjgVv2+9NJLnHLKKUyZ
-MoUjjzyya4OXpCqor6+nvr6+2mH0aJVOSmcBO0fEYOBl4CRgYmmDiPhUZr5a/LwfhWWqWiWk0Dwp
-ldS+X//61xx22GFsv/32fPKTn2Tu3LmMHDkSgIEDB3LRRRdxzjnnsGBBy2cOC84991xOPPFEfvKT
-n3DwwQdz+umn8zd/8zet2q1cuZKamhpWrlzJK6+8wn333ddUN2PGDE444QQ+/elPs3jxYhobG5vW
-O40ILrnkEi699NI2k9LTTjuNyZMnM2HChHXx7ZCkims5WXb55ZdXL5geqqKX7zPzfeA84HfAU8CM
-zJwfEWdHxJeLzY6LiHkRMReYCpxYyZik3qKxsZFZs2bR2NjYqq6urq5pBvT4449n+vTpzervvPNO
-ttlmG5566qk2+z700ENZunQpZ511FgsWLKCmpoY33nijVbtNN92UhoYG5s+fz1133cUpp5zSLIbj
-jz8egPHjx3PzzTc32/fAAw8kInj44Ydb9Tt27FhuuOEGVq1a1cl3QZLUW1R6ppTM/G9gtxZl15Z8
-vhq4utJxSL1JXd2NnHnmOfTrN4TVq5cxbdo1TJxY+H3uzTff5L777mPevHlEBO+//z4R0XQf6e23
-386KFSu4++67GT9+PIcddhibbLJJq2NsscUWnHTSSZx00klNDyJ1NHO5//778/rrr/P666/zyiuv
-sGjRIg455BAAVq9ezY477sg555zTbJ+LL76YK664go033rhZ+YUXXsgvfvELjjvuOH7zm9/Qp093
-uP1dklRJnumlHqaxsZEzzzyHlStn8tZbc1i5ciZnnnlO04zpzTffzKmnnsrSpUtZsmQJzz33HDvu
-uCMPPfQQq1at4n//7//NNddcw5577sn48eO54oorWh1j5syZrFy5EoAVK1awePFidthhh1btSu8p
-XbBgAR988AFbb70106dP5/LLL2fJkiUsWbKEF154gZdeeonly5c323/s2LG8+eabPPHEE636vuqq
-qxg4cCBnnHHGR/p+SZJ6BpNSqYdZtmwZ/foNAYYXS4az8caDWbZsGQA33nhjqxnNL37xi9TV1XHF
-FVdw7LHHsttuhYsXl112GTNmzGDx4sXN2s+ZM4d9992XffbZhwMOOIAvf/nLjBo1qlUsq1atoqam
-hpEjRzJx4kSuv/56IoKbbrqpVQwTJkxgxowZrfq45JJLWL58edOT/2v/BPj5z3/OK6+8wkUXtXoZ
-nCSpl4me8j75iMieEqtUSY2NjQwePIyVK2dSSEyfoH//MTz33IKmB4kkSdUVEWSmLwfqAmdKpR5m
-0KBBTJt2Df37j2HzzWvo338M06ZdY0IqSerRnCmVeqjGxkaWLVvGkCFDTEglqZtxprTrTEolSZLW
-MZPSrvPyvSRJkqrOpFSSJElVZ1IqSZKkqjMplSRJUtWZlEqSJKnqTEolSZJUdSalkiRJqjqTUkmS
-JFWdSakkSZKqzqRUkiRJVWdS2ku8+uqrTJw4kV122YXRo0dz1FFH8eyzz/Lcc8+x9957c8899zBy
-5EhGjhzJgAEDGDZsGDU1NXzpS1/i/vvvZ9y4ca36vP/++9liiy2oqalhxIgRHHroobz++uvN2owf
-P57PfOYzzcomTZrEZptt1qztgAED2vx85513MmzYMJYvX76uvhWSJKkHMintJSZMmMBBBx3EokWL
-mDVrFlOmTOHVV18FCu/fHTt2LHPnzmXu3LmMHj2auro6Ghoa+PnPf97Upi2f//znaWho4PHHH2ff
-fffl6quvbqp76623mDdvHqtXr2bZsmVN5RHBoEGDuPLKK5uVtfx877338o1vfIP//u//Zvvtt19X
-3wpJktQDmZT2AjNnzqRfv36cddZZTWV77703BxxwQJvtM5PMLKvvte0ykxUrVrDllls21d16660c
-ffTRnHDCCdTV1TXb7/TTT+fGG2/kz3/+c7N+1n5+8MEHOfvss7njjjsYMmRIWbFIkqTey6S0F5g3
-bx6jRo2qSN8PPvggNTU1DB48mHvvvZczzjijqa6uro4TTzyR448/vlVSOmDAAM444wymTp3aqs93
-332XCRMmcNttt7HLLrtUJG5JktSzmJSqQ2sv3z///POcfvrpXHDBBQC89tprPPvss3z6059m6NCh
-9OvXj6effrrZvl/96le5/vrrefvtt5uVb7zxxnz2s5/lpz/96XobhyRJ6t5MSnuQxsZGZs2aRWNj
-Y7PyPffck9mzZ1f8+OPGjePBBx8E4MYbb+TNN99k6NCh7LjjjixbtqzVbOnAgQM5+eSTufrqq5vd
-U9q3b19uuukm/vjHPzJlypSKxy1Jkrq/iielEXF4RCyIiIURcVEH7UZHxJqIOLbSMfVEdXU3Mnjw
-MMaO/QqDBw+jru7GprqDDjqI1atXN5t5fPLJJ3n44YcByr5/tC2l+z744IPstNNOAMyYMYO7776b
-JUuWsHTpUmbPnt0qKQX4x3/8R6699lree++9Zn1usskm3HHHHUyfPp3/+I//+NDxSZKk3qGiSWlE
-9AF+AhwG7AlMjIhh7bT7LnB3JePpqRobGznzzHNYuXImb701h5UrZ3Lmmec0mzH91a9+xT333MPO
-O+/M3nvvzcUXX8w222wDtH6yvr0n7dvy0EMPUVNTwz777MMvf/lLrrzySp577jmef/559ttvv6Z2
-Q4YMYYsttmDWrFnN+t96662ZMGECq1evbnX8LbfckrvuuovJkydz++23d+2bIkmSepX4KLNonXYe
-sT9wWWYeUdz+JpCZ+b0W7b4OrAZGA7dn5q1t9JWVjLU7mzVrFmPHfoW33prTVLb55jX8/vfXMnr0
-6CpGJkmS2hIRZGb5s0Cq+OX7bYHSVdFfKJY1iYi/BcZn5r8C/vDaMGTIEFavXgY8USx5gjVrnnMp
-JUmS1Gt0hwedpgKl95qamLYwaNAgpk27hv79x7D55jX07z+GadOuYdCgQdUOTZIkaZ3YqML9vwjs
-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
+<img src="data:image/png;base64,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
+wNSpBTfNnj59Ooceeijdu3enZ8+evPlm2d8zL7p8Tk5OfPkJEyZwyCGHkJOTwyGHHEKdOnX46KOP
+qmfDkjhO6SJRcPTRR/vSpUvd3X306NF+9dVXu7v7K6+84rm5ucXmXbRokffo0cN//PFH//zzz71T
+p06+c+fOUuv8xz/+4TfccIO7uy9dutTbtm3r7u7r1q3zn376yd3dP/vsM2/durVv3Lix2rZNaqfh
+w4f7Y4895u7u27dv92+//dZHjx7td955Z6l5P/zwQ//qq6/c3X3hwoXeqlWrMtdZ3vJFLViwwDt3
+7rxbfY/VhjLrRqW+OFyVzMyT9do1qX379uTn5ye7GyIitUq7du1Yvnx5qXYzw8s5S1AFq5rFwk92
+N0REapXyPht3VbB08VsREQkFFSwREQkFFSwREQkFFSwREQkFFSwRkSq0bds2unbtytq1a5PdFQBW
+rlxJRkZG/ASHvn378thjjwEwbtw4jjrqqPi86enpZZ65V1lnnHEGr7766m6vpyQVrCTIymqPmVXb
+T1ZW+wr7kJ6eTkZGBhkZGdSpU4eGDRvG2yZOLLgC1+LFizn11FNp3Lgxe++9N8cddxzvvfceADNn
+zozP36hRI9LS0sjIyIi3rVq1Kv5a5513HvXq1Sv1B3zTTTcxdOjQhHP729/+xn777cdee+1F+/bt
+ufbaa9m2bVt8etE/xEJvvfUWbdq0YdWqVfG+paenk5aWRqNGjeJtM2fOLPZHDXDRRReVarv44ou5
+5JJLir3Grravfv36ZGRk0KRJEw4//HDefvvtYn2rU6dO/PfQtm1bzjzzzGKXWSopPz8/nnVGRgYt
+WrRgwIABTJ8+vdh87du3p2HDhsV+J5dffjlQ8CFVt27d+Do6d+7MQw89VOo1du7cycknnxxfvn79
++jRo0CC+XGEOt956Kx07doxvQyJX7sjNzSUzM5Pt27eXyjItLY0XX3yxWPsf/vAH0tLSGD9+fLxt
+9erVnHvuuTRt2pT09HR69+7NSy+9VOZ2FDVixAhuuOGGeBZpaWn8/e9/LzZPmzZtmDFjBr/97W/j
+29+gQYP47zMjI4Nf/vKXZW7bww8/zDHHHEPz5s3jr1eY2z777EO/fv1YtGhRhRlVpLDvV155ZbH2
+559/nrS0NM4///z4tmzevBmzMk+8K9a+ZcsW2rdvv9t9GzlyJNddd91ur6ckFawkWLs2n4IbOFfP
+T8H6d23Lli1s3ryZzZs3065dO1566aV421lnncVnn31Gnz596N69O8uXL+fLL79k4MCB9O/fn1mz
+ZtGnT5/4/IsWLcLM2LRpU7ytdevWAHz//fc8++yzHHjggTz55JOl+lHeH1FJl112GY888ghPPvkk
+W7Zs4ZVXXuH111+PX5JoV8yM1q1bx/u2ZcsWzIwFCxbE23r37o27M3du/C4fzJw5kzZt2hRrmzFj
+BkcffXT8eUXbN2TIEDZv3sz69es57rjjOOOMM4pNb9WqVfz38P7773PAAQdw1FFHlXu1gcLt2bRp
+E5s3b2b+/Pn069ePX//618U+zM2Ml156Kb69mzdv5r777otPP+KII+Kv+8wzz3D11Vczf/78YssD
+vPzyy/HlzznnHEaOHBlfbuzYsYwbN46nnnqKN954g82bN/PBBx9w3HHH7fL3kZ+fz+zZs2nWrBkv
+vPBCqW3bf//9i23LTz/9xNNPP03nzp3jbRs3bqRPnz7sscceLFmyhG+++YYrrriCs88+m2effbbY
++iqSmZnJHXfcwXfffVdq2oMPPhjf/muvvTb++9y8eXOx4ljUQw89VOofscLcvvzyS9q0acOIESMq
+7FciOnXqxJQpU4oV5fHjx7P//vtXyfqD6tmzJ1u2bCn2t1MVVLCkzKskjx49miOOOIK//OUvNG7c
+mL322ovLLruMoUOHMnLkyHLXU9K//vUvOnTowMiRI/nnP/8ZqH+ffvopDz74IBMmTKBXr16kpaWR
+nZ3Nv/71L6ZOnUpeXl6l11lym+vWrcthhx3GjBkzAFi3bh3btm1j8ODB8bavv/6aTz75pFjBSnT7
+0tLSOOecc/jmm2/45ptvypynZcuW3HTTTVx44YXlZly0/wDNmjXj8ssvZ/To0Vx99dVlzlORHj16
+kJ2dzZIlSxKav6gPPviAE044If5febNmzbjwwgt3ucz48eM5/vjjGTZsWJmZnXLKKcycOZNNmzYB
+MHXqVLp3705WVlZ8nrvuuov09HQeeeQR9t13Xxo0aMCQIUO47rrr+OMf/1ipbcjOzubwww/nzjvv
+rNRyZVm5ciVffPEFhx12WJnTGzRowODBg1m8eHG87bPPPiM3N5fGjRvTrFmzSl1bMisri4MPPjg+
+/LZx40beffddBgwYEJ+nvD3NsqSlpfH5558DsHnzZoYNG0azZs3o0KEDt9xyS3y+wqHEq666iszM
+TDp16hS/VFOhY445ptyiHpQKlpRp+vTpDBo0qFT74MGDeeedd/jxxx8TWs+4ceM488wz+dWvfsWn
+n34av45eZbz++uu0adOGX/ziF8XaW7duTe/evXnttdcqvc6yHH300fHiNGPGDI466ij69OnDW2+9
+FW/r2LEjLVu2jC+T6PZt27aNcePG0alTJ5o2bbrLfpx22mnMnTu32FXdK3Laaafx9ddfs3Tp0oSX
+KTRnzhyWLVsWv95hZfTu3Zvx48fz97//nf/85z8JfSiOHz+eM888k0GDBvHqq6+ybt26YtP33HNP
+Tj31VCZNmhSff9iwYcUK8PTp0zn99NNLrXvw4MGsWLGCZcuWJbwNZsbNN9/MPffcw7ffflvxAruw
+YMECOnbsSFpa2R+t3333HRMnTixW0K6//npOOOEEvv32W1atWsVll11Wqb4PGzaMceMKbv4+adIk
+Bg4cSP369UvNl+j6Cl166aVs2bKF5cuXk5eXx/jx43n88cfj02fPnk12djbr16/nqquu4oILLii2
+ruzs7GJ77VVBBUvK9M0339CiRYtS7S1atGDnzp1s2LChwnWsWLGCvLw8Bg0aRHp6OieeeGKxoZ7d
+7Uthf8rbY6msY445Jn47jrfffpujjjqK3r17M2vWLKBgiPCYY46Jz5/I9k2ePJnMzEwaNmzIo48+
+mtB/nC1btsTdK/XhWVhEi/5eBg4cSGZmJk2aNCEzM5NHH300Pu29994jMzOTjIwMevfuzdChQ4sN
+uSXqnHPO4f7772fatGnk5ubSvHlz7rjjjnLnnzlzJqtXr2bAgAF06dKFrl27MmHChFLzDR06lHHj
+xrFp0yZmzJjBwIEDi03f1fuzcHpldOvWjeOPP57bb7+9UsuV9O2335Kenl6q/W9/+1s873fffZfJ
+kyfHp9WrV4/8/HxWr15N/fr1OeKIIyr1mgMHDuStt95i8+bN8eIeVOE/BTt37mTy5MmMGTOGhg0b
+0q5dO6688kqeeOKJ+Lzt2rXj/PPPx8wYPnw4a9as4euvv45PT09P3+1/AEpSwZIyNW3alK+++qpU
++1dffUVaWlr8iuC78sQTT3DQQQfRpUsXoODMoaeeeoqffvqpSvpS2J/CPZa6deuWOoi/fft26tWr
+l9Dr9O7dm61bt7Jw4cL4HtZee+1FmzZt4m1FhwMT2b4zzzyTDRs28PXXX3PQQQdx//33V9iP1atX
+Y2Y0btw4oX4XLgOwzz77xNuef/55NmzYwMaNG9mwYUOx/4APP/xwNmzYwObNm1mzZg0LFy4MfJD8
+rLPOYtq0aXz77bc89NBDXH/99eXu9Y4fP57+/fvTqFEjAAYNGhTfOyjqyCOPZN26ddxyyy2ccsop
+NGjQoNj0Xb0/C6fXrVsXIOH3xF/+8hcefPDBYh+6ldWkSRO2bNlSqv2qq65iw4YN5Ofn06BBg2L/
+2Pztb39j586d9OrVi4MPPrjYXkwi9thjD375y1/y17/+lQ0bNnD44YcH7n+hb775hh07dtC2bdt4
+W7t27Yrdm63oEO2ee+6Juxe7lc2WLVsq9R5OhAqWlKlfv348/fTTpdonT57M4Ycfzh577FHhOp54
+4gmWLVtGixYtaNGiBVdccQXr16/n5ZdfrlRfjj32WFauXFnq7LmVK1fy/vvv069fPwDatm1b6pTc
+zz//nHbt2iX0Og0aNKBnz568+OKLrFmzhv322w+Ao446ihdffJEFCxaUKliJbl9mZib/+Mc/ePjh
+h/niiy922Y9nn32WnJwc9txzz4T6XbhM8+bN432GxI9h7bvvvpx++umlzsyrrDp16nD66afTrVs3
+Fi5cWGr6Dz/8wJQpU3jjjTfimd15553Mnz+fBQsWlJr/3HPP5a677mL48OGlpvXr16/YyRWFJk+e
+TNu2benSpQstWrSgXr16pd4TX3zxRZnvif3335/TTjuNW265JeEhtJK6devGF198Ue7QaOvWrbn3
+3nu5+eab44WtWbNmPPzww6xevZqHHnqISy65JH4cKVFDhw7lrrvuqtRZt7vStGnT+J5fofz8/DJv
+dVOeJUuW0L179yrpTyEVLCnTjTfeyLvvvsv111/Pxo0b2bp1K/fffz9PPvlkmUM+JT8c33vvPT7/
+/HPmzJnD/PnzmT9/PosWLeKss84qdQbYjz/+GP8pepp6oS5duvCb3/yGc845h1mzZrFz504WLVrE
+GWecQf/+/enbty9QsDfz+OOPM2fOHKDgrrz33HNPpQ5iH3XUUdx7773FhmWOPPJI7r33Xlq0aEGH
+Dh0qtX1F7bfffgwYMKBYfkVz+/LLL7npppt47LHHit3ksaSiJ4x8/fXXPPDAA9x8882MGTMm4e0s
++rrr16/nueee46CDDipz+q6MGzeOl19+ma1bt+LuvPLKKyxevLjMkw6ee+456taty5IlS+KZLVmy
+hD59+pSZ2eWXX85rr71Gnz59Sk37wx/+wKZNm7jgggtYu3YtP/74IxMnTuS2226Ln6KelpbG6aef
+znXXXceGDRvYsWMHEydOZMmSJZx00kllbs8NN9zA448/Hngoq1WrVnTu3JnZs8u/yXq/fv3o0qUL
+Y8eOBeCZZ56J77k0btyYtLS0co+BleeYY47htdde49JLLy1zemUvwJ2WlsbgwYO57rrr2Lp1K/n5
++dx9992VKohvvfVWuTkHpYKVBM2btwOs2n4K1p+4sv6b7Ny5MzNnzuTDDz+kffv2tGzZkueee45p
+06bRu3fvCtcxfvx4Bg4cyIEHHkizZs3iP7///e/5v//7v/gHwqRJk2jYsCENGzZkzz33LPc4yv/8
+z/9w4YUXcu6555Kens7JJ5/MscceyzPPPBOfp3///owZM4YRI0bQuHFjTjnlFEaMGMFFF12U0DZD
+wR/+unXrin2Zsk+fPqxbt67Y3lWi21fSn/70J8aPHx8fdvrqq6/i35Xq1asXixYt4q233trlqeFm
+RpMmTUhPT6dbt25MnTqVZ555ptSeyK9+9av4d4YyMjKKnaTw/vvvx9u7du1K8+bNi532XlY+ZbVl
+ZGRw66230q5dO5o0acI111zDQw89VOZxmPHjx3P++efTqlWrYpldeumlPPXUU6X2Spo0aRL/Z6Tk
+62dmZjJz5kz++9//cuCBB9K0aVPuuecennzyyWJfHRg7diyZmZl069aN5s2bM3bsWF5++WX23Xff
+MrNt3749Q4cOLfMU90T95je/KfUVg5L+9Kc/cd9997F9+3bmzJnDYYcdRkZGBgMHDuS+++6Ln3V5
+0EEHxb8XWZG+ffuWOwRXtA+72nssOu2+++6jYcOGdOzYkaOPPppzzz13l6fjF112zpw5pKenBzqR
+Z1d0e5FqptuLiETLtm3byMnJ4fXXX49/eThqzjjjDC688EJOPPHEcucJcnsRFaxqpoIlIlKa7ocl
+IiIpSwVLRERCQQVLRERCQQVLRERCIaGCZWZ7m9nTZrbEzBaZ2WFm1sTMppnZUjN71cz2LjL/KDNb
+Fpu/f/V1X0REoqJugvPdC7zs7oPMrC6wF3AtMN3d7zCzkcAo4BozOxAYDGQDrYHpZtYlEqcElqFd
+u3aBvzUvIpKqEr0CTVEVntZuZhnAPHfvVKL9Y+AYd19rZllAnrsfYGbXAO7ut8fmewUY7e6zSiwf
+1RomKaDgn5Da+v6tvV+lUG7BRCm33T2tvQPwjZk9bmZzzexhM2sINHf3tQDuvgZoFpu/FbCyyPKr
+Y20iIiKBJTIkWBfIAX7n7h+Y2d3ANZQu95UusaNHj44/zs3NJTc3t7KrEBGREMvLy0v4JqyJDAk2
+B95z946x530oKFidgNwiQ4Jvunt2GUOCU4EbNSQoqSRKQzRVSbkFE6XcdmtIMDbst9LMCu9bcByw
+CHgBOC/WNhx4Pvb4BWCImdU3sw5AZ6D8SxeLiIgkINGzBC8HnjKzesDnwAigDjDFzM4H8ik4MxB3
+X2xmU4DFwHbgEu1KiYjI7tLFb0UCiNIQTVVSbsFEKTdd/FZEREJPBUtEREJBBUtEREJBBUtEREJB
+BUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtE
+REJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREIh
+oYJlZsvNbL6ZzTOz2bG2JmY2zcyWmtmrZrZ3kflHmdkyM1tiZv2rq/MiIhIdie5h7QRy3f0Qd+8V
+a7sGmO7u+wNvAKMAzOxAYDCQDZwEjDUzq9pui4hI1CRasKyMeU8FxsUejwMGxh4PACa5+w53Xw4s
+A3ohIiKyGxItWA68ZmZzzOzCWFtzd18L4O5rgGax9lbAyiLLro61iYiIBFY3wfmOdPevzGxfYJqZ
+LaWgiBVV8nmFRo8eHX+cm5tLbm5uZVchIiIhlpeXR15eXkLzmnvl6oyZ3QhsBS6k4LjWWjPLAt50
+92wzuwZwd789Nv9U4EZ3n1ViPV7Z1xapLQoOy9bW969RW/+2lFswUcrNzHD3Ms97qHBI0Mwamlmj
+2OO9gP7AAuAF4LzYbMOB52OPXwCGmFl9M+sAdAZm79YWiIhI5CUyJNgceM7MPDb/U+4+zcw+AKaY
+2flAPgVnBuLui81sCrAY2A5col0pERHZXZUeEqyyF9aQoIRYlIZoqpJyCyZKue3WkKCIiEhtoIIl
+IiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKh
+oIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIlIiKhoIIl
+IiKhoIIlIiKhoIIlIiKhkHDBMrM0M5trZi/Enjcxs2lmttTMXjWzvYvMO8rMlpnZEjPrXx0dFxGR
+aKnMHtbvgcVFnl8DTHf3/YE3gFEAZnYgMBjIBk4CxpqZVU13RUQkqhIqWGbWGjgZeKRI86nAuNjj
+ccDA2OMBwCR33+Huy4FlQK8q6a2IiERWontYdwNXAV6krbm7rwVw9zVAs1h7K2BlkflWx9pEREQC
+q1vRDGb2S2Ctu39oZrm7mNV3Ma1Mo0ePjj/Ozc0lN3dXqxcRkVSTl5dHXl5eQvOa+67rjJndCpwL
+7AD2BNKB54BDgVx3X2tmWcCb7p5tZtcA7u63x5afCtzo7rNKrNcrem2R2qrgsGxtff8atfVvS7kF
+E6XczAx3L/O8hwqHBN39Wndv6+4dgSHAG+4+FHgROC8223Dg+djjF4AhZlbfzDoAnYHZu7kNIiIS
+cRUOCe7CGGCKmZ0P5FNwZiDuvtjMplBwRuF24BLtSomIyO6qcEiw2l5YQ4ISYlEaoqlKyi2YKOW2
+W0OCIiIitYEKloiIhIIKloiIhIIKloiIhIIKloiIhIIKloiIhIIKloiIhIIKloiIhIIKloiIhIIK
+loiIhIIKloiIhIIKloiIhIIKloiIhIIKloiIhIIKloiIhIIKloiIhIIKloiIhIIKloiIhIIKloiI
+hIIKloiIhIIKloiIhIIKloiIhIIKloiIhEKFBcvMGpjZLDObZ2aLzOzWWHsTM5tmZkvN7FUz27vI
+MqPMbJmZLTGz/tW5ASIiEg3m7hXPZNbQ3b83szrAO8CVwABgvbvfYWYjgSbufo2ZHQg8BfQEWgPT
+gS5e4oXMrGSTSGiYGVBb379Gbf3bUm7BRCk3M8PdraxpCQ0Juvv3sYcNYstsBE4FxsXaxwEDY48H
+AJPcfYe7LweWAb2CdV1ERKRAQgXLzNLMbB6wBshz98VAc3dfC+Dua4BmsdlbASuLLL461iYiIhJY
+3URmcvedwCFmlgG8ama5lN4/rfQ+4ejRo+OPc3Nzyc3NrewqREQkxPLy8sjLy0to3oSOYRVbwOx6
+4L/ABUCuu681syzgTXfPNrNrAHf322PzTwVudPdZJdajY1gSWlE6plCVlFswUcptt45hmVnTwjMA
+zWxP4HhgHvACcF5stuHA87HHLwBDzKy+mXUAOgOzd2sLREQk8hIZEmwBjLOCEp8GPOHur8eOaU0x
+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
+hG6FgrILRrkFo9yCSbXcIl2wREQkPKI+JCgiIiGhgiUiIqGggiUiIqGggiVSTczsJzOba2YLzWye
+mf3RzHZ5KrGZtTOzs2qqjyJhooIlUn2+c/ccdz8IOB44CbixgmU6AGdXe89EQkgFS6QGuPs3wMXA
+pRDfk5phZh/EfnrHZr0N6BPbM/u9maWZ2R1mNsvMPjSzi5K1DSLJptPaRaqJmW1294wSbRuA/YEt
+wE5332ZmnYGJ7t7TzI4BrnT3AbH5LwL2dfdbzaw+8A5whrvn1+zWiCRf1C/NJFLTCo9h1QceiF2F
+4CegSznz9wcONrNBsecZsXlVsCRyVLBEaoiZdaTgqgPrzOxGYI27dzOzOsB/y1sMuMzdX6uxjorU
+UjqGJVJ94mcEmtm+wIPA/bGmvYGvYo+HAXVij7cA6UXW8SpwiZnVja2ni5ntWZ2dFqmttIclUn32
+MLO5FAz/bQfGu/vdsWljgX+Z2TBgKvBdrP0jYKeZzQP+6e73xm4LMTd2SvzXwMAa3AaRWkMnXYiI
+SChoSFBEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtEREJBBUtERELh/wNqwK9QNv8Y7QAA
+AABJRU5ErkJggg==
 "
 >
 </div>
@@ -16185,266 +16120,19 @@ pFSSJElVZ1IqSZKkqjMplSRJUtX9f8LqmSEx97MTAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Mobile-Banks---Let-us-see-the-MoM-trend-for-Airtel-Mobile-Bank.-I-am-expecting-a-spike-post-demonitisation-!!">Mobile Banks - Let us see the MoM trend for Airtel Mobile Bank. I am expecting a spike post demonitisation !!<a class="anchor-link" href="#Mobile-Banks---Let-us-see-the-MoM-trend-for-Airtel-Mobile-Bank.-I-am-expecting-a-spike-post-demonitisation-!!">&#182;</a></h4>
+<p><B><I> Inference : Yes as expected we are seeing monthly Debit transaction value for Airtel Mobile bank is shooting from less than a million to 600 million, post demonetisation</p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">master_df2</span><span class="p">[</span><span class="n">master_df2</span><span class="p">[</span><span class="s1">&#39;BANK&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;AIRTEL PAYMENTS BANK LIMITED&#39;</span><span class="p">][[</span><span class="s1">&#39;TOTAL OUTWARD DEBITS AMOUNT (Rs. Million)&#39;</span><span class="p">]]</span>\
-                <span class="o">.</span><span class="n">sort_index</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Rs in Millions&#39;</span><span class="p">)</span>
-</pre></div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="I-will-be-publishing-ATM-and-POS-transaction-analysis-soon.">I will be publishing ATM and POS transaction analysis soon.<a class="anchor-link" href="#I-will-be-publishing-ATM-and-POS-transaction-analysis-soon.">&#182;</a></h2>
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[36]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xbb15f28&gt;</pre>
-</div>
-
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-F1xwAZMnT+bXv/51nfM05Lvf/S4DBw5kyZIlWc2f6eWXX+bwww9P/1fetWtXzj777C0uU1ZWxmGH
-Hcapp55aZ2ZHH3008+bN47PPPgNg5syZ7LPPPnTv3j09z4033khhYSF33nknO+20E+3bt+fEE0/k
-sssu45e//GWjtmHgwIEccMAB/P73v2/UcnVZvnw577//Pvvvv3+d09u3b8+4ceNYvHhxuu3dd9+l
-pKSETp060bVr16z2UKt0796dvffeOz389sknn/DCCy8wevTo9Dz17WnWpaCggPfeew+AyspKTj31
-VLp27Uq/fv246qqr0vNVDSVefPHFFBcXs9tuuzFz5sxq6xoxYkS9RT2UCpbUafbs2Rx//PG12seN
-G8ff//53vvrqq6zWU1paygknnMCPfvQj/vnPf/Laa681ui/PPvssvXv35nvf+1619l69ejF06FCe
-eeaZRq+zLgcffHC6OM2dO5fhw4czbNgw5syZk27bdddd2XnnndPLZLt9X3/9NaWlpey222506dJl
-i/045phjePXVV/nyyy+z7vsxxxzD6tWrefvtt7NepsrChQtZunQp3//+9xu97NChQykrK+N3v/sd
-r7zySlYfimVlZZxwwgkcf/zxPP3006xZs6ba9A4dOjBmzBimTp2anv/UU0+tVoBnz57NscceW2vd
-48aN44MPPmDp0qVZb4OZceWVV3LTTTfx6aefZr1cXd5880123XVXCgrq/mj9/PPPefDBB6sVtMsv
-v5zDDz+cTz/9lA8//JDzzz+/UX0/9dRTKS1N3fx96tSpjB07lnbt2tWaL9v1VTnvvPPYsGEDy5Yt
-o7y8nLKyMu6555709AULFjBw4EDWrVvHxRdfzFlnnVVtXQMHDqy2194UVLCkTmvXrqVHjx612nv0
-6MHmzZtZv359g+v44IMPKC8v5/jjj6ewsJAjjjii2lDP1valqj/17bE01ogRI5g3bx4Af/vb3xg+
-fDhDhw5l/vz5QGqIcMSIEen5s9m+adOmUVxcTMeOHbnrrruy+o9z5513xt0b9eFZVUQzfy9jx46l
-uLiYzp07U1xczF133ZWe9uKLL1JcXExRURFDhw5l/Pjx1YbcsnXyySdz6623MmvWLEpKSujWrRvX
-X399vfPPmzePFStWMHr0aAYMGMCee+7JAw88UGu+8ePHU1paymeffcbcuXMZO3Zstelben9WTW+M
-wYMHc9hhh3Hdddc1armaPv30UwoLC2u133DDDem8X3jhBaZNm5ae1rZtWyoqKlixYgXt2rXjwAMP
-bNRrjh07ljlz5lBZWZku7qGq/inYvHkz06ZN49prr6Vjx4706dOHiy66iHvvvTc9b58+fTjzzDMx
-M0477TRWrlzJ6tWr09MLCwu3+h+AmlSwpE5dunTh448/rtX+8ccfU1BQQOfOnRtcx7333stee+3F
-gAEDgNSZQ/fffz/ffvttk/Slqj9Veyxt2rSpdRB/06ZNtG3bNqvXGTp0KBs3buStt95K72Ftt912
-9O7dO92WORyYzfadcMIJrF+/ntWrV7PXXntx6623NtiPFStWYGZ06tQpq35XLQOw4447ptsef/xx
-1q9fzyeffML69eur/Qd8wAEHsH79eiorK1m5ciVvvfVW8EHyk046iVmzZvHpp59y++23c/nll9e7
-11tWVsaoUaPYfvvtATj++OPTeweZDjroINasWcNVV13F0UcfTfv27atN39L7s2p6mzapS6Vm+574
-7W9/y2233VbtQ7exOnfuzIYNG2q1X3zxxaxfv56Kigrat29f7R+bG264gc2bNzNkyBD23nvvansx
-2dh222056qij+K//+i/Wr1/PAQccENz/KmvXruWbb75hl112Sbf16dMn/T4Dqg3RdujQAXdn48aN
-6bYNGzY06j2cDRUsqdPIkSN56KGHarVPmzaNAw44gG233bbBddx7770sXbqUHj160KNHD37+85+z
-bt06nnrqqUb15Qc/+AHLly+vdfbc8uXLeemllxg5MnWXm1122aXWKbnvvfceffr0yep12rdvz377
-7ccTTzzBypUr2X333QEYPnw4TzzxBG+++WatgpXt9hUXF/Pf//3f3HHHHbz//vtb7Mejjz7Kvvvu
-S4cOHbLqd9Uy3bp1S/cZsj+GtdNOO3HsscfWOjOvsbbZZhuOPfZYBg8ezFtvvVVr+r/+9S+mT5/O
-c889l87s97//PW+88QZvvvlmrflPOeUUbrzxRk477bRa00aOHFnt5Ioq06ZNY5dddmHAgAH06NGD
-tm3b1npPvP/++3W+J/bYYw+OOeYYrrrqqqyH0GoaPHgw77//fr1Do7169eLmm2/myiuvTBe2rl27
-cscdd7BixQpuv/12zj333PRxpGyNHz+eG2+8sVFn3W5Jly5d0nt+VSoqKujZs2fW61iyZAn77LNP
-k/SnigqW1GnSpEm88MILXH755XzyySds3LiRW2+9lfvuu6/OIZ+aH44vvvgi7733HgsXLuSNN97g
-jTfeYNGiRZx00km1zgD76quv0j+Zp6lXGTBgAD/72c84+eSTmT9/Pps3b2bRokUcd9xxjBo1ikMO
-OQRI7c3cc889LFy4EIB33nmHm266qVEHsYcPH87NN99cbVjmoIMO4uabb6ZHjx7069evUduXaffd
-d2f06NHV8svM7aOPPuKKK67g7rvv5ppr6r+dXOYJI6tXr+aPf/wjV155Jddee23W25n5uuvWreOx
-xx5jr732qnP6lpSWlvLUU0+xceNG3J2//vWvLF68uM6TDh577DHatGnDkiVL0pktWbKEYcOG1ZnZ
-BRdcwDPPPMOwYcNqTfvFL37BZ599xllnncWqVav46quvePDBB7nmmmvSp6gXFBRw7LHHctlll7F+
-/Xq++eYbHnzwQZYsWcKRRx5Z5/b85je/4Z577gkeyurZsyf9+/dnwYL6b7I+cuRIBgwYwJQpUwB4
-+OGH03sunTp1oqCgoN5jYPUZMWIEzzzzDOedd16d0xt7Ae6CggLGjRvHZZddxsaNG6moqOAPf/hD
-owrinDlz6s05lApWDnTr1gewZvtJrT97df032b9/f+bNm8frr79O37592XnnnXnssceYNWsWQ4cO
-bXAdZWVljB07lkGDBtG1a9f0z4UXXshf/vKX9AfC1KlT6dixIx07dqRDhw71Hkf505/+xNlnn80p
-p5xCYWEhP/zhD/nBD37Aww8/nJ5n1KhRXHvttZxxxhl06tSJo48+mjPOOINzzjknq22G1B/+mjVr
-qn2ZctiwYaxZs6ba3lW221fTr371K8rKytLDTh9//HH6u1JDhgxh0aJFzJkzZ4unhpsZnTt3prCw
-kMGDBzNz5kwefvjhWnsiP/rRj9LfGSoqKqp2ksJLL72Ubt9zzz3p1q1btdPe68qnrraioiKuvvpq
-+vTpQ+fOnZk4cSK33357ncdhysrKOPPMM+nZs2e1zM477zzuv//+WnslnTt3Tv8zUvP1i4uLmTdv
-Hl9++SWDBg2iS5cu3HTTTdx3333VvjowZcoUiouLGTx4MN26dWPKlCk89dRT7LRTtfvRpvXt25fx
-48fXeYp7tn72s5/V+opBTb/61a+45ZZb2LRpEwsXLmT//fenqKiIsWPHcsstt6TPutxrr73S34ts
-yCGHHFLvEFxmH7a095g57ZZbbqFjx47suuuuHHzwwZxyyilbPB0/c9mFCxdSWFgYdCLPluj2Is1M
-txcRSZavv/6afffdl2effTb95eGkOe644zj77LM54ogj6p0n5PYiKljNTAVLRKQ23Q9LRETylgqW
-iIjEggqWiIjEggqWiIjEQlYFy8x2MLOHzGyJmS0ys/3NrLOZzTKzt83saTPbIWP+S8xsaTT/qObr
-voiIJEWbLOe7GXjK3Y83szbAdsClwGx3v97MJgCXABPNbBAwDhgI9AJmm9mARJwSWIc+ffoEf2te
-RCRfZXsFmkwNntZuZkXAa+6+W432/wVGuPsqM+sOlLv7d8xsIuDufl0031+Bye4+v8bySa1hkgdS
-/4S01vdv6/0qhXILk6Tctva09n7AWjO7x8xeNbM7zKwj0M3dVwG4+0qgazR/T2B5xvIrojYREZFg
-2QwJtgH2Bf6vu79sZn8AJlK73De6xE6ePDn9uKSkhJKSksauQkREYqy8vDzrm7BmMyTYDXjR3XeN
-ng8jVbB2A0oyhgSfd/eBdQwJzgQmaUhQ8kmShmiaknILk6TctmpIMBr2W25mVfctOBRYBMwATo/a
-TgMejx7PAE40s3Zm1g/oD9R/6WIREZEsZHuW4AXA/WbWFngPOAPYBphuZmcCFaTODMTdF5vZdGAx
-sAk4V7tSIiKytXTxW5EASRqiaUrKLUySctPFb0VEJPZUsEREJBZUsEREJBZUsEREJBZUsEREJBZU
-sEREJBZUsEREJBZUsEREJBZUsEREJBZUsEREJBZUsEREJBZUsEREJBZUsEREJBZUsEREJBZUsERE
-JBZUsEREJBZUsEREJBZUsEREJBZUsEREJBZUsEREJBZUsEREJBZUsEREJBZUsEREJBayKlhmtszM
-3jCz18xsQdTW2cxmmdnbZva0me2QMf8lZrbUzJaY2ajm6ryIiCRHtntYm4ESd/8Pdx8StU0EZrv7
-HsBzwCUAZjYIGAcMBI4EppiZNW23RUQkabItWFbHvGOA0uhxKTA2ejwamOru37j7MmApMAQREZGt
-kG3BcuAZM1toZmdHbd3cfRWAu68EukbtPYHlGcuuiNpERESCtclyvoPc/WMz2wmYZWZvkypimWo+
-b9DkyZPTj0tKSigpKWnsKkREJMbKy8spLy/Pal5zb1ydMbNJwEbgbFLHtVaZWXfgeXcfaGYTAXf3
-66L5ZwKT3H1+jfV4Y19bpLVIHZZtre9fo7X+bSm3MEnKzcxw9zrPe2hwSNDMOprZ9tHj7YBRwJvA
-DOD0aLbTgMejxzOAE82snZn1A/oDC7ZqC0REJPGyGRLsBjxmZh7Nf7+7zzKzl4HpZnYmUEHqzEDc
-fbGZTQcWA5uAc7UrJSIiW6vRQ4JN9sIaEpQYS9IQTVNSbmGSlNtWDQmKiIi0BipYIiISCypYIiIS
-CypYIiISCypYIiISCypYIiISCypYIiISCypYIiISCypYIiISCypYIiISCypYIiISCypYIiISCypY
-IiISCypYIiISCypYIiISCypYIiISCypYIiISCypYIiISCypYIiISCypYIiISCypYIiISCypYIiIS
-CypYIiISC1kXLDMrMLNXzWxG9Lyzmc0ys7fN7Gkz2yFj3kvMbKmZLTGzUc3RcRERSZbG7GFdCCzO
-eD4RmO3uewDPAZcAmNkgYBwwEDgSmGJm1jTdFRGRpMqqYJlZL+CHwJ0ZzWOA0uhxKTA2ejwamOru
-37j7MmApMKRJeisiIomV7R7WH4CLAc9o6+buqwDcfSXQNWrvCSzPmG9F1CYiIhKsTUMzmNlRwCp3
-f93MSrYwq29hWp0mT56cflxSUkJJyZZWLyIi+aa8vJzy8vKs5jX3LdcZM7saOAX4BugAFAKPAd8H
-Stx9lZl1B55394FmNhFwd78uWn4mMMnd59dYrzf02iKtVeqwbGt9/xqt9W9LuYVJUm5mhrvXed5D
-g0OC7n6pu+/i7rsCJwLPuft44Ang9Gi204DHo8czgBPNrJ2Z9QP6Awu2chtERCThGhwS3IJrgelm
-diZQQerMQNx9sZlNJ3VG4SbgXO1KiYjI1mpwSLDZXlhDghJjSRqiaUrKLUySctuqIUEREZHWQAVL
-RERiQQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVLRERi
-QQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVLRERiQQVL
-RERiQQVLRERiQQVLRERiocGCZWbtzWy+mb1mZovM7OqovbOZzTKzt83saTPbIWOZS8xsqZktMbNR
-zbkBIiKSDObuDc9k1tHdvzCzbYC/AxcBo4F17n69mU0AOrv7RDMbBNwP7Af0AmYDA7zGC5lZzSaR
-2DAzoLW+f43W+rel3MIkKTczw92trmlZDQm6+xfRw/bRMp8AY4DSqL0UGBs9Hg1Mdfdv3H0ZsBQY
-EtZ1ERGRlKwKlpkVmNlrwEqg3N0XA93cfRWAu68Eukaz9wSWZyy+ImoTEREJ1iabmdx9M/AfZlYE
-PG1mJdTeP230PuHkyZPTj0tKSigpKWnsKkREJMbKy8spLy/Pat6sjmFVW8DscuBL4CygxN1XmVl3
-4Hl3H2hmEwF39+ui+WcCk9x9fo316BiWxFaSjik0JeUWJkm5bdUxLDPrUnUGoJl1AA4DXgNmAKdH
-s50GPB49ngGcaGbtzKwf0B9YsFVbICIiiZfNkGAPoNRSJb4AuNfdn42OaU03szOBCmAcgLsvNrPp
-wGJgE3CudqVERGRrNXpIsMleWEOCEmNJGqJpSsotTJJy2+rT2kVERHJNBUtERGJBBUtERGJBBUtE
-RGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJB
-BUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtERGJBBUtE
-RGKhwYJlZr3M7DkzW2Rmb5rZBVF7ZzObZWZvm9nTZrZDxjKXmNlSM1tiZqOacwNERCQZzN23PINZ
-d6C7u79uZtsDrwBjgDOAde5+vZlNADq7+0QzGwTcD+wH9AJmAwO8xguZWc0mkdgwM6C1vn+N1vq3
-pdzCJCk3M8Pdra5pDe5huftKd389erwRWEKqEI0BSqPZSoGx0ePRwFR3/8bdlwFLgSFbtQUiIpJ4
-jTqGZWZ9ge8CLwHd3H0VpIoa0DWarSewPGOxFVGbiIhIsDbZzhgNBz4MXOjuG82s5j5go/cJJ0+e
-nH5cUlJCSUlJY1chIiIxVl5eTnl5eVbzNngMC8DM2gB/Af7q7jdHbUuAEndfFR3net7dB5rZRMDd
-/bpovpnAJHefX2OdOoYlsZWkYwpNSbmFSVJuW3UMK3I3sLiqWEVmAKdHj08DHs9oP9HM2plZP6A/
-sKDRvRYREcmQzVmCBwFzgTdJlXgHLiVVhKYDvYEKYJy7fxotcwlwFrCJ1BDirDrWqz0sia0k/cfb
-lJRbmCTltqU9rKyGBJuDCpbEWZI+QJqScguTpNyaYkhQREQkp1SwREQkFlSwREQkFlSwREQkFlSw
-REQkFlSwREQkFlSwREQkFlSwREQkFlSwREQkFlSwREQkFlSwREQkFlSwREQkFlSwREQkFlSwREQk
-FlSwRESzb/mmAAAP3klEQVQkFlSwREQkFlSwREQkFlSwEq57976YWav86d69b67jEZFWxHJ1S2gz
-89Z6O+okSdKtt5uScguj3MIkKTczw92trmnawxIRkVhQwRIRkVhQwRIRkVhQwRIRkVhosGCZ2V1m
-tsrM/pHR1tnMZpnZ22b2tJntkDHtEjNbamZLzGxUc3VcRESSJZs9rHuAw2u0TQRmu/sewHPAJQBm
-NggYBwwEjgSmWOr0FhERka3SYMFy93nAJzWaxwCl0eNSYGz0eDQw1d2/cfdlwFJgSNN0VUREkiz0
-GFZXd18F4O4rga5Re09gecZ8K6I2ERGRrdKmidYT9K2xyZMnpx+XlJRQUlLSRN0REZE4KC8vp7y8
-PKt5s7rShZn1AZ5w98HR8yVAibuvMrPuwPPuPtDMJgLu7tdF880EJrn7/DrWqStdtAJJ+gZ9U1Ju
-YZRbmCTl1hRXurDop8oM4PTo8WnA4xntJ5pZOzPrB/QHFjS6xyIiIjU0OCRoZg8AJcCOZvYBMAm4
-FnjIzM4EKkidGYi7Lzaz6cBiYBNwrnajRESkKejitwmXpKGGpqTcwii3MEnKTRe/FRGR2FPBEhGR
-WFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDB
-EhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGRWFDBEhGR
-WFDBEhGRWGi2gmVmR5jZ/5rZO2Y2obleR0REkqFZCpaZFQB/BA4H9gROMrPvNMdrNYfy8vJcdyHG
-ynPdgZgqz3UHYqo81x2IqfJcdyBIc+1hDQGWunuFu28CpgJjmum1mpwK1tYoz3UHYqo81x2IqfJc
-dyCmynPdgSDNVbB6Assznn8YtYmIiATJm5Muunfvi5k1yc8VV1zRZOsyM7p375vreEREYs/cvelX
-ajYUmOzuR0TPJwLu7tdlzNP0LywiIrHn7lZXe3MVrG2At4FDgY+BBcBJ7r6kyV9MREQSoU1zrNTd
-vzWz84BZpIYd71KxEhGRrdEse1giIiJNLW9OuhARkfymgiUiIrHQLMew4sTMjNQXnau+J7YCWOAa
-K22Qsguj3MIotzD5lFuij2GZ2ShgCrCU1C8RoBfQHzjX3Wflqm+tnbILo9zCKLcw+ZZb0gvWEuBI
-d19Wo70f8JS7D8xJx2JA2YVRbmGUW5h8yy3px7DakLpsVE0rgLYt3Je4UXZhlFsY5RYmr3JL+jGs
-u4GFZjaVf1/7sDdwInBXznoVD8oujHILo9zC5FVuiR4SBDCzQcBoqh+QnOHui3PXq3hQdmGUWxjl
-Fiafckt8wRIRkXhI9DEsM9vBzK6N7oy83szWmdmSqK1TrvvXmim7MMotjHILk2+5JbpgAdOBT4AS
-dy929x2BQ6K26TntWeun7MIotzDKLUxe5ZboIUEze9vd92jsNFF2oZRbGOUWJt9yS/oeVoWZ/drM
-ulU1mFk3M5tA9TsmS23KLoxyC6PcwuRVbkkvWCcAOwJzzOwTM1sPlAPFwLhcdiwGlF0Y5RZGuYXJ
-q9wSPSQoIiLxkfQ9rDQz23dLz6V+yi6Mcguj3MLkQ24qWP/2nw08l/opuzDKLYxyCxP73DQkKCIi
-sZD0awnm1b1iWpqyC6Pcwii3MPmUW6L3sCzP7hXTkpRdGOUWRrmFybfckl6w8upeMS1J2YVRbmGU
-W5h8yy3pJ13k1b1iWpiyC6Pcwii3MHmVW9KPYeXVvWJamLILo9zCKLcweZVboocEIb/uFdPSlF0Y
-5RZGuYXJp9wSX7BERCQeEn0MK9/uFdOSlF0Y5RZGuYXJt9wSXbDIs3vFtDBlF0a5hVFuYfIqt0QP
-CebbvWJakrILo9zCKLcw+ZZb0vew8upeMS1M2YVRbmGUW5i8yi3pBSuv7hXTwpRdGOUWRrmFyavc
-Ej0kKCIi8ZH0Pay0fLhXTK4ouzDKLYxyC5MPualg/Vvs7xWTQ8oujHILo9zCxD43DQmKiEgsJP1a
-gnl1r5iWpuzCKLcwyi1MPuWW6D0sy7N7xbQkZRdGuYVRbmHyLbekF6y8uldMS1J2YZRbGOUWJt9y
-S/pJF3l1r5gWpuzCKLcwyi1MXuWW9GNYeXWvmBam7MIotzDKLUxe5ZboIUHIr3vFtDRlF0a5hVFu
-YfIpt8QXLBERiYdEH8PKt3vFtCRlF0a5hVFuYfItt0QXLPLsXjEtTNmFUW5hlFuYvMot0UOC+Xav
-mJak7MIotzDKLUy+5Zb0Pay8uldMC1N2YZRbGOUWJq9yS3rByrxXzPq43yumhSm7MMotjHILk1e5
-JXpIUERE4iPpe1giIhITKlgiIhILKlgiIhILKlj1MLPDct2HuFJ2YZRbGOUWJo656aSLepjZB+6+
-S677EUfKLoxyC6PcwsQxt0Rfrd3MZtQ3idSpoFIPZRdGuYVRbmHyLbdEFyxgOHAKsLFGe9UtpaV+
-yi6Mcguj3MLkVW5JL1gvAV+4+5yaE8zs7Rz0J06UXRjlFka5hcmr3HQMS0REYkFnCUbMrNjMinPd
-jzhSdmGUWxjlFiYfckt0wTKzXcxsqpmtAeYDC8xsddTWN7e9a92UXRjlFka5hcm33BJdsIBpwGNA
-d3cf4O79gR7A/wBTc9qz1k/ZhVFuYZRbmLzKLdHHsMxsqbsPaOw0UXahlFsY5RYm33JL+lmCr5jZ
-FKCUf98bpjdwGvBaznoVD8oujHILo9zC5FVuSd/DagecBYwBekbNK4AZwF3u/lWu+tbaKbswyi2M
-cguTb7klumCJiEh8JP2ki1rM7NVc9yGulF0Y5RZGuYWJc24qWLVZrjsQY8oujHILo9zCxDY3Faza
-nsx1B2JM2YVRbmGUW5jY5qZjWCIiEgvaw6qHmb2Z6z60ZmbWO/q2/N/M7FIza5sx7X9y2be40nuu
-fnq/hTGzwWY2O8qun5k9b2afRjn2z3X/GivR38Mys2PqmwR0b8m+xNDdwCOkrgZ9FjDHzH7k7uuA
-PjntWSum91wwvd/C3A5cA2wP/B34JamrXxwNTAFG5a5rjZfoIUEz2wTcD9QVwnHuXtjCXYoNM3vd
-3b+b8fwU4BJgNPCQu++bs861YnrPhdH7LYyZvebu/xE9/md0aaaqaa/GLbdE72EB/wB+5+5v1Zxg
-ZiNz0J84aWtm27r7vwDc/T4zWwk8DWyX2661anrPhdH7Lcw2GY9vrDGtXUt2pCkk/RjWz4HKeqb9
-uCU7EkN3AvtnNrj7bOB4oNaHsaTpPRdG77cwfzKz7QHcfUpVY3T8anbOehUo0UOCIiISH0kfEqyX
-mf3G3X+b637EkbLbMjM7HBhL9Wu7Pe7uM3PXq9ZPuYXJp9y0h1UPM/vA3XfJdT/iSNnVz8xuAnYH
-yoAPo+ZewKnAUne/MFd9a82UW5h8yy3RBcvM6juWYEAHd9ceaD2UXRgze8fdd6+j3YB34nZ/opai
-3MLkW25JP+niU2CAuxfV+CkEPs5151o5ZRfmX2a2Xx3t+wH/aunOxIhyC5NXuSX9v+AyUl86XFXH
-tAdauC9xo+zCnA7cZmaF/HuIpjfwWTRN6nY6yi3E6eRRbokeEhTJFTPrTsZBcHdfmcv+xIVyC5Mv
-uSV9SLAWM5uc6z7ElbLLnruvdPdX3P0V4P/kuj9xodzC5EtuKli1jc51B2JM2YVRbmGUW5jY5qaC
-VVtsb27WCii7MMotjHILE9vcdAyrBjMzVyhBlF0YMytw98257kfcKLcwcc4t0XtYZvZjMyuOHu9k
-ZmXAP8xsmpn1ynH3WjVlF8bMbjSzgzLb4vrh0ZKUW5h8yy3Re1hmttjdB0WPp5G6185DwEjgZHc/
-LJf9a82UXRgzWwNUADuRui/Rg+7+Wm571foptzD5llui97Cofun9/u7+B3f/0N3/TOoXLPVTdmE+
-dPfvA4cBG4D7zOx/zWySmdW6IoGkKbcweZVb0gtWuZn91sw6RI9/DGBmh5D6Yp3UT9mFcQB3f8fd
-r3T3PYFxwLbAUzntWeum3MLkVW5JHxJsC1wGnBk19QI+B54AJrr7B7nqW2un7MJk3gFWsqfcwuRb
-bokuWJnMbAegjbuvy3Vf4kbZZc/Mtnf3jbnuR9wotzD5llvShwTT3P2zzA9cM/tOLvsTJ8oue1v6
-8FBu9VNuYfItN+1h1UP3dAqn7MIotzDKLUwcc0v01drN7Jb6JgGdWrIvcaPswii3MMotTL7llug9
-LDPbAFwEfFXH5N+7e5cW7lJsKLswyi2McguTb7kleg8LWAi85e4v1JygK483SNmFUW5hlFuYvMot
-6XtYxcC/3P2LXPclbpRdGOUWRrmFybfcEl2wREQkPhJ9WruZ7WBm10aXKllvZuvMbEnUFrsDki1J
-2YVRbmGUW5h8yy3RBQuYDnwClLh7sbvvCBwStU3Pac9aP2UXRrmFUW5h8iq3RA8Jmtnb7r5HY6eJ
-sgul3MIotzD5llvS97AqzOzXZtatqsHMupnZBGB5DvsVB8oujHILo9zC5FVuSS9YJwA7AnOi8d31
-QDlQTOqKxlI/ZRdGuYVRbmHyKrdEDwmKiEh8JH0PCzP7jpkdambb1Wg/Ild9igtlF0a5hVFuYfIp
-t0QXLDO7AHgcOB9YZGZjMiZfnZtexYOyC6Pcwii3MPmWW9IvzXQO8D1332hmfYGHzayvu99M6uKQ
-Uj9lF0a5hVFuYfIqt6QXrIKq+8W4+zIzKyH1C+1DDH+ZLUzZhVFuYZRbmLzKLdFDgsAqM/tu1ZPo
-F3s00AXYO2e9igdlF0a5hVFuYfIqt0SfJWhmvYBv3H1lHdMOcve/56BbsaDswii3MMotTL7lluiC
-JSIi8ZH0IUEREYkJFSwREYkFFSwREYkFFSyRZmJm35rZq2b2lpm9Zma/NLMtnkpsZn3M7KSW6qNI
-nKhgiTSfz919X3ffCzgMOBKY1MAy/YCfNHvPRGJIBUukBbj7WuCnwHmQ3pOaa2YvRz9Do1mvAYZF
-e2YXmlmBmV1vZvPN7HUzOydX2yCSazqtXaSZmFmluxfVaFsP7AFsADa7+9dm1h940N33M7MRwEXu
-Pjqa/xxgJ3e/2szaAX8HjnP3ipbdGpHcS/qlmURaWtUxrHbAH6OrEHwLDKhn/lHA3mZ2fPS8KJpX
-BUsSRwVLpIWY2a6krjqwxswmASvdfbCZbQN8Wd9iwPnu/kyLdVSkldIxLJHmkz4j0Mx2Am4Dbo2a
-dgA+jh6fCmwTPd4AFGas42ngXDNrE61ngJl1aM5Oi7RW2sMSaT7bmtmrpIb/NgFl7v6HaNoU4BEz
-OxWYCXwetf8D2GxmrwF/dvebo9tCvBqdEr8aGNuC2yDSauikCxERiQUNCYqISCyoYImISCyoYImI
-SCyoYImISCyoYImISCyoYImISCyoYImISCz8f1aHzjCMe03hAAAAAElFTkSuQmCC
-"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     </div>
   </div>
