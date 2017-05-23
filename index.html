@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
 <title>Demonitization</title>
@@ -11813,7 +11813,7 @@ I am writing this for few reasons, one I am seeing lot of articles on internet/n
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Below is a simple hack which I haven't used nor I would recommend you to use it. Actually RBI has blocked programmatic access to its website and hence we need to morph our make name from Python-Urllib to "Mozilla/5.0".
+<h1 id="Web-Scraping">Web Scraping<a class="anchor-link" href="#Web-Scraping">&#182;</a></h1><p>Below is a simple hack which I haven't used nor I would recommend you to use it. Actually RBI has blocked programmatic access to its website and hence we need to morph our make name from Python-Urllib to "Mozilla/5.0".
 Since this is bit unethical to exploit this method, I would suggest you to go and fetch the excel files manually and store them all at one place. I am showing this option to teach you little bit of hacking :)</p>
 <p>These statements will fetch the HTML page content which we will later pass through BeatifulSoup to parse it and fetch direct links to XLS files</p>
 
@@ -12027,7 +12027,7 @@ Since this is bit unethical to exploit this method, I would suggest you to go an
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Prepration-Starts-Here">Data Prepration Starts Here<a class="anchor-link" href="#Data-Prepration-Starts-Here">&#182;</a></h1><p>Here I will first pick up one of the xls downloaded to see the sheets/tabs available. Later I will parse one of the Tabs to see the content and then extract the content of the required Tab in a DataFrame. Lets see if I need to do some Data Munging to convert this raw data to usable format</p>
+<h1 id="Data-Prepration">Data Prepration<a class="anchor-link" href="#Data-Prepration">&#182;</a></h1><p>Here I will first pick up one of the xls downloaded to see the sheets/tabs available. Later I will parse one of the Tabs to see the content and then extract the content of the required Tab in a DataFrame. Lets see if I need to do some Data Munging to convert this raw data to usable format</p>
 
 </div>
 </div>
@@ -12464,18 +12464,9 @@ Level 3: Index([u&#39;AMOUNT (Rs. Million)&#39;,  u&#39;NO. OF TRANSACTIONS&#39;
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="NEFT-Detailed-Analysis">NEFT Detailed Analysis<a class="anchor-link" href="#NEFT-Detailed-Analysis">&#182;</a></h1><p>Here I will iterate through all the XLS files we have at this location and merge all the DataFrames togather. Note where we will be using concat function to stich the DataFrames on axis = 0, which is like "Union All" in case of SQL. 
+<h2 id="Get-All-Months-in-One-DataFrame">Get All Months in One DataFrame<a class="anchor-link" href="#Get-All-Months-in-One-DataFrame">&#182;</a></h2><p>Here I will iterate through all the XLS files we have at this location and merge all the DataFrames together. Note where we will be using concat function to stich the DataFrames on axis = 0, which is like "Union All" in case of SQL. 
 I will also be changing 3 level columns to one level as we don't need hierarchial Index.</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Month-on-Month-Analysis">Month on Month Analysis<a class="anchor-link" href="#Month-on-Month-Analysis">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12611,6 +12602,15 @@ So that I can compare QoQ growth between 2016-Q3 and 2016-Q4 with QoQ growth bet
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&gt;-master_df-is-the-consolidated-Data-Set-for-Analysis">&gt; master_df is the consolidated Data Set for Analysis<a class="anchor-link" href="#&gt;-master_df-is-the-consolidated-Data-Set-for-Analysis">&#182;</a></h2>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13854,11 +13854,13 @@ AElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<B><I>Inferences</I></B><ul>
+<h3 id="Inferences">Inferences<a class="anchor-link" href="#Inferences">&#182;</a></h3><blockquote><blockquote><ul>
 <li>We can see a sudden spike in NEFT transactions after Nov 2016, which is an impact of demonetization</li>
 <li>Dec, Jan and Feb look flat, post a spike after Nov'16 </li>
 <li>March 2017 has get maximum NEFT transactions in last 15 months. Reasons: End of Financial year, Tax payments etc. But the change between Feb'16 - March'16 and Feb'17 - March'17 looks comparable. Let us see % changes to validate this understanding</li>
 </ul>
+</blockquote>
+</blockquote>
 
 </div>
 </div>
@@ -14228,14 +14230,18 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<B><I>Inferences</I></B><ul>
+<h3 id="Inferences">Inferences<a class="anchor-link" href="#Inferences">&#182;</a></h3><blockquote><blockquote><ul>
 <li>%Change beteen Oct-Nov 2017 is in same lines of Oct-Nov 2016 - No effect of demonitisation </li>
 <li>%Change beteen Nov-Dec 2017 is in same lines of Nov-Dec 2016 - No effect of demonitisation </li>
 <li>%Change beteen Dec-Jan 2017 is -2% which is much less when compared to Dec-Jan 2016 which was -14% - Possible effect of demonitisation</li>
 <li>Jan-Feb is more or less flat</li>
 <li>%Change in Feb-Mar is on the higher side when comapred to 2016 this might be due to cumulative effect(End of Fin year + Demonitisation). </li>
 </ul>
-<B>Hence we can see a persistant change due to demonitisation. Lets have QoQ look to understand the impact better</B>
+<blockquote><p>Hence we can see a persistant change due to demonitisation. Lets have QoQ look to understand the impact better</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
 </div>
 </div>
 </div>
@@ -14853,7 +14859,10 @@ AABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Inference:-Yes-we-see-a-+ve-change-in-NEFT-transactions,-post-demonitization,-when-compared-to-FY16.-Lets-keep-a-watch-on-how-persistant-the-change-is-during-next-1-2-Quarters"><I>Inference: Yes we see a +ve change in NEFT transactions, post demonitization, when compared to FY16. Lets keep a watch on how persistant the change is during next 1-2 Quarters</I><a class="anchor-link" href="#Inference:-Yes-we-see-a-+ve-change-in-NEFT-transactions,-post-demonitization,-when-compared-to-FY16.-Lets-keep-a-watch-on-how-persistant-the-change-is-during-next-1-2-Quarters">&#182;</a></h4>
+<h3 id="Inference">Inference<a class="anchor-link" href="#Inference">&#182;</a></h3><blockquote><blockquote><p>Yes we see a +ve change in NEFT transactions, post demonitization, when compared to FY16. Lets keep a watch on how persistant the change is during next 1-2 Quarters&lt;/I&gt;</p>
+</blockquote>
+</blockquote>
+
 </div>
 </div>
 </div>
@@ -15506,7 +15515,9 @@ c/6aDo5+pIAAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<B><I> Inference </I></B><p>So we see the <B>Leader Banks</B> here. SBI was excpected to be a leader in # of transaction due to its huge customer base but I wasn't expecting HDFC next to SBI in terms of Value and volume. ICICI and AXIS stay close.</p>
+<h3 id="Inference">Inference<a class="anchor-link" href="#Inference">&#182;</a></h3><blockquote><blockquote><p>So we see the <B>Leader Banks</B> here. SBI was excpected to be a leader in # of transaction due to its huge customer base but I wasn't expecting HDFC next to SBI in terms of Value and volume. ICICI and AXIS stay close.</p>
+</blockquote>
+</blockquote>
 <p>Let me now drill down and see the trsanctions value for SBI and HDFC to understand the pattern. For this I will first filter my DataFrame to have only SBI and HDFC records. For this I will create a new DataFrame named - sbi_hdfc and plot MoM Aggregated Value of NEFT Txns between these 2 banks</p>
 
 </div>
@@ -15815,7 +15826,10 @@ gg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<B><I> Inference:  Well this is bit of a Surprise !! HDFC has started leading SBI in terms of Aggregated Value of NEFT transactions after Jan'17. So if we talk about 2017 only, HDFC is the leader in terms of NEFT Txn Value. </I></B>
+<h3 id="Inference:">Inference:<a class="anchor-link" href="#Inference:">&#182;</a></h3><blockquote><blockquote><B>Well this is bit of a Surprise !! HDFC has started leading SBI in terms of Aggregated Value of NEFT transactions after Jan'17. So if we talk about 2017 only, HDFC is the leader in terms of NEFT Txn Value. </B>
+</blockquote>
+</blockquote>
+
 </div>
 </div>
 </div>
@@ -16117,7 +16131,9 @@ AABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><B><I> Inference : Yes as expected we are seeing monthly Debit transaction value for Airtel Mobile bank is shooting from less than a million to 600 million, post demonetisation</p>
+<h3 id="Inference-:">Inference :<a class="anchor-link" href="#Inference-:">&#182;</a></h3><blockquote><blockquote><p>Yes as expected we are seeing monthly Debit transaction value for Airtel Mobile bank is shooting from less than a million to 600 million, post demonetisation</p>
+</blockquote>
+</blockquote>
 
 </div>
 </div>
@@ -16127,7 +16143,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="I-will-be-publishing-ATM-and-POS-transaction-analysis-soon.">I will be publishing ATM and POS transaction analysis soon.<a class="anchor-link" href="#I-will-be-publishing-ATM-and-POS-transaction-analysis-soon.">&#182;</a></h2>
+<h2 id="Click-here-to-see-ATM-and-POS-Analysis">Click here to see ATM and POS Analysis<a href="https://rbi.org.in"></a></h2>
 </div>
 </div>
 </div>
